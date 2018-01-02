@@ -1,0 +1,70 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+.cc-sprite {
+  bottom: 0;
+  line-height: 0;
+  position: relative;
+}
+.cc-sprite-amex,
+.cc-sprite-discover,
+.cc-sprite-mc,
+.cc-sprite-visa,
+.cc-sprite-visa-gift-card,
+.cc-sprite-diners-club {
+  background-image: url("images/cc-images-sprite.png?timestamp=@@timestamp");
+  background-repeat: no-repeat;
+  background-size: 220px 30px;
+  width: 40px;
+  height: 28px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.show-visa > li {
+  margin-left: 9px;
+}
+.show-visa > li:first-child {
+  margin-left: 0;
+}
+.cc-sprite-visa {
+  background-position: 0 0;
+}
+.cc-sprite-mc {
+  background-position: -44.5px 0;
+}
+.cc-sprite-amex {
+  background-position: -89px 0;
+}
+.cc-sprite-discover {
+  background-position: -133.5px 0;
+}
+.cc-sprite-diners-club {
+  background-position: -178px 0;
+}
+.show-mc .cc-sprite-mc {
+  background-position: 0 0;
+}
+.show-visa .cc-sprite-visa {
+  background-position: -44.5px 0;
+}
+.show-amex .cc-sprite-amex {
+  background-position: -89px 0;
+}
+.show-discover .cc-sprite-discover {
+  background-position: -133.5px 0;
+}
+.show-diners-club .cc-sprite-diners-club {
+  background-position: -178px 0;
+}
+.cvc-cc img,
+.cvc-amex img {
+  height: 64px;
+  margin: 25px -4px 0 -5px;
+  width: 100px;
+}
+.cvc-cc > span,
+.cvc-amex > span {
+  display: block;
+  height: 35px;
+  font-size: 14px;
+  font-family: "Omnes-ATT-W02-Medium";
+  margin-bottom: 15px;
+}

@@ -1,0 +1,100 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoBubble';
+  src: url('fonts/font-icons/icon-speechbubbles.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-speechbubbles.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-speechbubbles.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-bubble-"] {
+  font-family: 'icoBubble' !important;
+}
+.icon-bubble-chatunavailable:before {
+  content: "\e91c";
+}
+.icon-bubble-autoconferencingL:before {
+  content: "\e900";
+}
+.icon-bubble-autoconferencing:before {
+  content: "\e901";
+}
+.icon-bubble-byeL:before {
+  content: "\e902";
+}
+.icon-bubble-bye:before {
+  content: "\e903";
+}
+.icon-bubble-calleridannounceL:before {
+  content: "\e904";
+}
+.icon-bubble-calleridannounce:before {
+  content: "\e905";
+}
+.icon-bubble-chatunavailable2:before {
+  content: "\e91d";
+}
+.icon-bubble-commentcheckL:before {
+  content: "\e906";
+}
+.icon-bubble-commentcheck:before {
+  content: "\e907";
+}
+.icon-bubble-forumsL:before {
+  content: "\e908";
+}
+.icon-bubble-forums:before {
+  content: "\e909";
+}
+.icon-bubble-helloL:before {
+  content: "\e90a";
+}
+.icon-bubble-hello:before {
+  content: "\e90b";
+}
+.icon-bubble-messagesL:before {
+  content: "\e90c";
+}
+.icon-bubble-messages:before {
+  content: "\e90d";
+}
+.icon-bubble-messagingL:before {
+  content: "\e90e";
+}
+.icon-bubble-messaging:before {
+  content: "\e90f";
+}
+.icon-bubble-notificationsL:before {
+  content: "\e910";
+}
+.icon-bubble-notifications:before {
+  content: "\e911";
+}
+.icon-bubble-soundmessageL:before {
+  content: "\e912";
+}
+.icon-bubble-soundmessage:before {
+  content: "\e913";
+}
+.icon-bubble-textnotificationL:before {
+  content: "\e914";
+}
+.icon-bubble-textnotification:before {
+  content: "\e915";
+}
+.icon-bubble-videoconferencingL:before {
+  content: "\e916";
+}
+.icon-bubble-videoconferencing:before {
+  content: "\e917";
+}
+.icon-bubble-voicemailmessageL:before {
+  content: "\e918";
+}
+.icon-bubble-voicemailmessage:before {
+  content: "\e919";
+}
+.icon-bubble-webconferencingL:before {
+  content: "\e91a";
+}
+.icon-bubble-webconferencing:before {
+  content: "\e91b";
+}

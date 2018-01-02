@@ -1,0 +1,71 @@
+.searchBar {
+    position: relative;
+}
+
+
+/* .btn-search {
+    top: -1.3rem;
+    left: -1.5rem;
+} */
+
+.icon-right:before {
+    content: unset;
+}
+
+.icon-hamburger {
+    color: white;
+}
+
+.shopAndSupportText {
+    margin-top: 0;
+}
+
+.ub_header.gn-ds2 {
+    font-family: font-regular, Omnes-ATT-W02, Arial;
+}
+
+.btn-search[class*="btn"] {
+    float: right;
+    background-repeat: no-repeat;
+    margin-right: 7px;
+    border: none;
+    height: 30px;
+    margin-top: 0px;
+    background-size: auto;
+    background-position: -106px -73px;
+    min-width: 3.4rem !important;
+    width: 3.4rem;
+    background-image: url("/assets/images/att-sprite.jfif") !important;
+}
+
+// #ub_att_logo {
+//     background-position: 87px 45px;
+// }
+
+[class*='icon-right']{
+    color: black;
+}
+
+/* @media (min-width:1024px) {
+    /* Tab and Desktop * /
+    .btn-search {
+        right: 2.5rem;
+    }
+} */
+
+@media (min-width:768px) and (max-width:1078px) {
+    /* Tab and Desktop */
+    .btn-search[class*="btn"] {
+        top: 1rem;
+        right: 2.15rem;
+        display: none;
+    }
+}
+
+@media (max-width:767px) {
+    /* Tab and Desktop */
+    .btn-search[class*="btn"] {
+        top: -1.85rem;
+        right: 1.15rem;
+    }
+}

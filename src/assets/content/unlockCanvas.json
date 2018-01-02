@@ -1,0 +1,24 @@
+{
+  "statusCode": 600,
+  "responseMessage": "Success",
+  "errors": null,
+  "status": "SUCCESS",
+  "Panel1": [
+    {
+      "titleMsg1": "Device unlock portal",
+      "description1": "Welcome to device unlock, your step-by-step guide to unlocking AT&amp;T phones, tablets, and mobile hotspots. If you're moving a device to AT&amp;T, be sure to contact your own carrier to unlock it first.",
+      "titleMsg2": "Taking a trip?",
+      "description2": "Did you know that it isn’t always necessary to unlock a device if you’re planning a trip?",
+      "description3": "Learn how you can use the talk, text &amp; data you already have in over 100 countries with",
+      "description4": "International Day Pass"
+    }
+  ],
+  "Panel2": [
+    {
+      "titleMsg2": "Device unlock help",
+      "description2": "Not sure you have all the info you need? Read the article",
+      "description3": "Unlock a device",
+      "description4": "if you need help."
+    }
+  ]  
+}

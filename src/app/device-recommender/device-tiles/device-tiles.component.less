@@ -1,0 +1,188 @@
+@import '../device-recommender.component.less';
+
+// device grid styles
+.device-container {
+	.recommended-device {
+		margin-right: 1.5rem;
+
+		&:nth-child(even) {
+			margin-left: auto; // Pushes even elements to the right
+		}
+	}
+
+	.recommended-device-row {
+		justify-content: space-between;
+	}
+
+	.device-img {
+		margin-right: 0.9rem;
+		padding: 1rem;
+	}
+	.device-grid {
+		padding: 4rem 0;
+		min-height: 425px;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		margin-bottom: 2.0rem;
+		background-color: #FFFFFF;
+	}
+	.device-grid:hover, .device-grid:focus {
+		box-shadow: 3px 3px 0 white inset, -3px -3px 0 white inset, -3px 3px 0 white inset, 3px -3px 0 white inset, 0 0 0 3px #0568ae;
+	}
+
+	.device-desc-grid {
+		padding-top: 2rem;
+	}
+	.device-make {
+		font-size: 1.8rem;
+		line-height: 4rem;
+		margin-bottom: 0rem;
+		font-family: @att-font-light;
+	}
+	.device-model {
+		font-size: 3.6rem;
+		line-height: 3rem;
+		margin-bottom: 0rem;
+		font-family: @att-font-light;
+	}
+	.default-price-block {
+		margin-bottom: 2rem;
+	}
+	.default-price-label {
+		font-size: 1.8rem;
+		margin: 1rem 0;
+	}
+	.default-price {
+		font-size: 2.8rem;
+		line-height: 4rem;
+		font-family: @att-font-light;
+	}
+	.default-price-month {
+		font-size: 2rem;
+		line-height: 4rem;
+	}
+	.shortLegalContainer {
+		font: 1.2rem @att-font;
+	}
+
+	// Light theme
+    .light-theme {
+        background-color: @lightThemeSecondary;
+    }
+
+    // Dark theme
+    .dark-theme {
+        color: @darkThemeTextColor;
+        background-color: @darkThemePrimary;
+
+        .shortLegalContainer a {
+            color: #2882f1;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+	.device-container {
+		padding: 0;
+
+		.recommended-device {
+			min-height:	auto;
+		}
+
+		.device-grid:focus, .device-grid:hover {
+			box-shadow: none;
+		}
+
+		.device-grid {
+			padding: 2.5rem 0;
+			height:	auto;
+			min-height:	auto;
+			margin-bottom: 0;
+			border-radius: 0;
+			border-bottom: 1px solid darkgray;
+		}
+		.device-img {
+			width: 40% !important;
+			float:left !important;
+			margin: 2.5rem 1rem 0 0 !important;
+			padding: 0 0 0 1rem;
+		}
+		.hero-device-img {
+			width: 40% !important;
+			float:left !important;
+			margin-right: 0rem !important;
+		}
+		.device-desc-grid {
+			height: auto;
+			width: 50% !important;
+			float:left !important;
+		}
+		.device-make, .device-model {
+			margin-bottom: 0rem;
+			line-height: 3rem;
+		}
+		.device-model {
+			font-size: 3rem;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 980px) {
+	.device-container .device-grid {
+		height: 465px;
+	}
+}
+
+// ribbon styles
+.ribbon-div {
+	margin-bottom: 2rem;
+}
+.ribbon-badge {
+	width:14rem;
+	height:2.0rem;
+	color: #fff;
+	font-weight:bold;
+	border-right: 15px solid transparent;
+	border-top: 15px solid #096fec;
+	border-left: 15px solid #096fec;
+	border-bottom: 15px solid #096fec;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.ribbon-badge > div {
+	margin-top: -.925rem;
+	font-size: 1.6rem;
+	text-align: left;
+	text-transform: uppercase;
+}
+@media (max-width: 767px) {
+	.ribbon-div {
+		margin-bottom: 1.5rem;
+	}
+}
+// user rating styles
+.starRatingContainer {
+	margin: 1.5rem 0 1rem;
+}
+.starBlock {
+	width: 75px;
+	float: left;
+	margin-right: 5px;
+}
+.final-rating {
+	float: left;
+}
+.total-reviews {
+	border-left: 1px solid darkgray;
+	float: left;
+	margin-left: 5px;
+	padding: 0 0 0 5px;
+}
+.starRating {font-size:12px;height:15px;background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAeCAYAAABkDeOuAAADk0lEQVRo3u2Yz2tcRRzAP995b/Nj0yCxJnjpwUO0CrWmFmwOjQVv2b0Wj4KX/gFCEdQuadHevPcigr1Ir9mAUA/+AC9KWyuouYtJAyahNu0m8/brYSfJ/nivZOaVnYtfWJidmc98lnnz5juzUBDamLusjbnLBEQoG8Ppw5pc+IPXJ4AFYMGVjy4OZGM4fdk0t7aqJxF5E2CvqieBX45sD2VjOD1Zk19bOQ/MADOmUz56hLIxnJ5sqh/PvdpTk9jxNnrBYAyA0L6gjVPfk6WPe/q1H49ixlverNppACTdGJqzPLsln/3xt+iVM18h+k7vItMXEZFOURVkrYsElW8R+xOazvuzeh8EhFPDc5Zmb8jSrz8mH85P3TdJOiKGtxCZRpg8gAFEpFPHJKIZ8OWT3dbnlU9/+yaM3b1ms2xluM7S7N3OygO0gUHfeBcxlxB5Oz9t6Hdo+wZy92tZon2YdsPYGM6yrPT0+eR0DUm+wMhM7zurD9Dsfbl2r1mYggPZGM5QtvfoYMwJ4PjAyMJxxJx4elYJZGM4A9mDnU4vvjYCLCCSdDY6vQ16G1VFJGnDgusz+JQC2RjOMuxhWngleQnkHOgWqtdRfc99roNuGeRcp09OhLIxnCXYw9cwqcwj+hfKFbl652ZXn4+0Mfc7wiWSyjzw54A8lI3hLMF2suFFEvvy6fNpav6VpTs/F1w2z1rbPpau3vtBbpEdLukwNoazLFsYtVpttFarjYbc4kPZGE4fNi1qEJFjrtjylYeyMZw+rCmYaQNMABOu7POUgtgYTl+2qHEEGAPGVHXE80GFsjGcXqwpWJZV94qmruyzpIPYGE5fVur1+mjvtUgFmBaRSff9IbAhItpzK2i3xRijvqyqJu5HZsNyPgM2W1lZsSnwgntnDy7e3Ru/G2i8b5IficgOUPVlReSJK44Ny/kM2E3AGmvthqpuuzNXWpAh9+sF2LbWbjSbzc1Ads1auzZkZ1l2p+dfh3q9/hww5WY/L3aAzeXl5e3+hlA2hrMMm+wXVldXW7Ozs1ZEJnI2fquq681m82HeyKFsDGcZ1vTtJ5WipenanpZVgtgYzlD2YLIWFxelb1k+cp/9zFF1fQYilI3hLMOmfTNdBTJgE/jHNT0PTLkzSAXYLXhK3mwMZxk27Tuc7eVsbA/q9Xqra5DdgoOdNxvDWYY1XQevPWA9L3u4unXXZyBC2RjOsuz/ccT4D/QFQqbgW15RAAAAAElFTkSuQmCC") no-repeat left bottom;margin:0 auto;}
+.numOfStars {height:15px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAeCAYAAABkDeOuAAADk0lEQVRo3u2Yz2tcRRzAP995b/Nj0yCxJnjpwUO0CrWmFmwOjQVv2b0Wj4KX/gFCEdQuadHevPcigr1Ir9mAUA/+AC9KWyuouYtJAyahNu0m8/brYSfJ/nivZOaVnYtfWJidmc98lnnz5juzUBDamLusjbnLBEQoG8Ppw5pc+IPXJ4AFYMGVjy4OZGM4fdk0t7aqJxF5E2CvqieBX45sD2VjOD1Zk19bOQ/MADOmUz56hLIxnJ5sqh/PvdpTk9jxNnrBYAyA0L6gjVPfk6WPe/q1H49ixlverNppACTdGJqzPLsln/3xt+iVM18h+k7vItMXEZFOURVkrYsElW8R+xOazvuzeh8EhFPDc5Zmb8jSrz8mH85P3TdJOiKGtxCZRpg8gAFEpFPHJKIZ8OWT3dbnlU9/+yaM3b1ms2xluM7S7N3OygO0gUHfeBcxlxB5Oz9t6Hdo+wZy92tZon2YdsPYGM6yrPT0+eR0DUm+wMhM7zurD9Dsfbl2r1mYggPZGM5QtvfoYMwJ4PjAyMJxxJx4elYJZGM4A9mDnU4vvjYCLCCSdDY6vQ16G1VFJGnDgusz+JQC2RjOMuxhWngleQnkHOgWqtdRfc99roNuGeRcp09OhLIxnCXYw9cwqcwj+hfKFbl652ZXn4+0Mfc7wiWSyjzw54A8lI3hLMF2suFFEvvy6fNpav6VpTs/F1w2z1rbPpau3vtBbpEdLukwNoazLFsYtVpttFarjYbc4kPZGE4fNi1qEJFjrtjylYeyMZw+rCmYaQNMABOu7POUgtgYTl+2qHEEGAPGVHXE80GFsjGcXqwpWJZV94qmruyzpIPYGE5fVur1+mjvtUgFmBaRSff9IbAhItpzK2i3xRijvqyqJu5HZsNyPgM2W1lZsSnwgntnDy7e3Ru/G2i8b5IficgOUPVlReSJK44Ny/kM2E3AGmvthqpuuzNXWpAh9+sF2LbWbjSbzc1Ads1auzZkZ1l2p+dfh3q9/hww5WY/L3aAzeXl5e3+hlA2hrMMm+wXVldXW7Ozs1ZEJnI2fquq681m82HeyKFsDGcZ1vTtJ5WipenanpZVgtgYzlD2YLIWFxelb1k+cp/9zFF1fQYilI3hLMOmfTNdBTJgE/jHNT0PTLkzSAXYLXhK3mwMZxk27Tuc7eVsbA/q9Xqra5DdgoOdNxvDWYY1XQevPWA9L3u4unXXZyBC2RjOsuz/ccT4D/QFQqbgW15RAAAAAElFTkSuQmCC") no-repeat left top;}
+@media (max-width: 767px) {
+	.starRatingContainer {
+		margin: 0.5rem 0 0;
+	}
+}

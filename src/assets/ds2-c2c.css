@@ -1,0 +1,54 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+.c2c {
+  height: 50px;
+  letter-spacing: 0.016em;
+}
+.c2c > a > div {
+  display: table;
+  float: none;
+  width: 100%;
+  margin-top: -2px;
+}
+.c2c > a > div > .cssIcon-c2c,
+.c2c > a > div > .cssIcon-c2c-disable {
+  background-image: none !important;
+  width: 34px;
+  height: 36px;
+  display: table-cell;
+  vertical-align: top;
+}
+.c2c > a > div > .cssIcon-c2c:after,
+.c2c > a > div > .cssIcon-c2c-disable:after {
+  background-image: url("images/ATT_Sprite_Retina_v3.2.2.png?timestamp=@@timestamp");
+  background-size: 224px 140px;
+  background-position: -33px -44px;
+  content: "";
+  display: block;
+  height: 26px;
+  width: 34px;
+  position: relative;
+  top: 4px;
+}
+.c2c > a > div > .cssIcon-c2c + div,
+.c2c > a > div > .cssIcon-c2c-disable + div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.c2c > a > div > .cssIcon-c2c + div > .c2c-content,
+.c2c > a > div > .cssIcon-c2c-disable + div > .c2c-content {
+  font-size: 1.2rem;
+  letter-spacing: -0.13px;
+  display: block;
+}
+.c2c > a > div > .cssIcon-c2c-disable:after {
+  background-position: -33px -71px;
+}
+.c2c-heading {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0;
+}
+.c2c-disable .c2c-heading,
+.c2c-contactus .c2c-heading {
+  color: #666;
+}

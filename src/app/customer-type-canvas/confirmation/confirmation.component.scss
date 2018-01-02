@@ -1,0 +1,17 @@
+@import '../../app.component.scss';
+
+@font-face {
+  font-family: 'icoControls';
+  src: url('../../../assets/fonts/font-icons/icon-controls.woff2?timestamp=@@timestamp') format('woff2'), url('../../../assets/fonts/font-icons/icon-controls.woff?timestamp=@@timestamp') format('woff'), url('../../../assets/fonts/font-icons/icon-controls.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-controls-approvalL:before, .icon-controls-approval:before {
+    content: "\e903";
+    font-family: 'icoControls' !important;
+}
+
+[class*="icon-"].icon-small {
+    top: -18px !important;
+}

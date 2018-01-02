@@ -1,0 +1,197 @@
+/*! Global styles - v1.4.8 - Last updated: 2016-10-12. Copyright (c) 2016 AT&T Services, Inc.*/
+.att-dark-green {
+  color: #007a3e;
+}
+/* BEGIN POPOVERS.LESS ************************* */
+.popover {
+  position: relative;
+  height: 20px;
+  vertical-align: middle;
+  margin: 1px 0 0 7px;
+}
+p .popover {
+  margin: -3px 7px 0 0;
+}
+label .popover {
+  margin: 1px 0 0 7px;
+}
+.popover .icon-tooltip {
+  background: none;
+  border: none;
+  display: inline-block;
+  font-size: 20px;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 20px;
+}
+.popover .icon-tooltip:before {
+  top: 0;
+}
+.popover .icon-tooltip:focus {
+  text-decoration: none;
+  outline: 1px dotted black;
+}
+.popover.active .icon-tooltip:focus {
+  outline: none;
+}
+.popover .arrow {
+  display: none;
+  border-color: transparent;
+  border-style: solid;
+  background-color: #0568ae;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transform: rotate(45deg);
+}
+.popover.active .icon-tooltip[data-placement="top"] .arrow {
+  display: block;
+  bottom: 32px;
+  top: auto;
+  border-width: 0 1px 1px 0;
+}
+.popover.active .icon-tooltip[data-placement="bottom"] .arrow {
+  border-width: 1px 0 0 1px;
+  display: block;
+  bottom: -33px;
+  top: auto;
+}
+.popover.active .arrow {
+  opacity: 1;
+}
+.popover .closingtooltip {
+  display: block;
+}
+.popover.active .closingtooltip {
+  display: none;
+}
+.popover .helpertext {
+  width: 400px;
+}
+.helpertext {
+  background-color: #0568ae;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  display: none;
+  margin: 0;
+  padding: 25px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  top: 38px;
+  z-index: 1009;
+}
+.popover.active .icon-tooltip[data-placement="bottom"] + .helpertext {
+  bottom: inherit;
+  top: 38px;
+}
+.popover.active .icon-tooltip[data-placement="top"] + .helpertext {
+  top: inherit;
+  bottom: 38px;
+}
+.popover.active .helpertext {
+  display: block;
+}
+.popover-onclick .btn.icon-tooltip {
+  border: medium none;
+  box-shadow: none;
+  color: #5a5a5a;
+  font-size: 20px;
+  height: 34px;
+  line-height: 36px;
+  margin: 0;
+  min-width: 50px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.popover-onclick.active .btn.icon-tooltip {
+  color: #0568ae;
+}
+.popover-onclick .icon-tooltip:before {
+  display: inline;
+  position: relative;
+}
+.popover-onclick textarea + .reset-field + .icon-tooltip {
+  top: 4px;
+  right: 5px;
+  min-width: 40px;
+}
+.popover-onclick.active .helpertext:before,
+.popover-onfocus.active .helpertext:before {
+  background-color: #0568ae;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: "";
+  display: block;
+  height: 15px;
+  left: 17px;
+  margin: 0;
+  position: absolute;
+  top: -7px;
+  transform: rotate(-45deg);
+  width: 15px;
+}
+.popover-onclick.active .helpertext {
+  display: block;
+  opacity: 1;
+  margin: 14px 0 0;
+}
+.popover-onclick.active .helpertext:before {
+  left: inherit;
+  right: 18px;
+}
+.popover-onclick .reset-field {
+  right: 37px;
+}
+.popover-onclick .reset-field:before {
+  position: relative;
+  top: -1px;
+}
+.popover-onfocus.active .helpertext {
+  display: block;
+  margin: 14px 0 10px 0;
+}
+.popover-title {
+  display: block;
+  font-size: 14px;
+  font-family: "Omnes-ATT-W02-Medium";
+  font-weight: bold;
+  margin-bottom: 8px;
+  white-space: normal;
+}
+.popover-content {
+  display: block;
+  font-size: 12px;
+  font-family: "Omnes-ATT-W02";
+  line-height: 1.5rem;
+  white-space: normal;
+}
+.popover-content span,
+.popover-content p {
+  line-height: 1.5rem;
+}
+.popover-content p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .helpertext {
+    position: relative;
+    top: 0;
+  }
+  .popover .helpertext {
+    width: 100%;
+  }
+  .popover.active .icon-tooltip[data-placement="bottom"] + .helpertext {
+    top: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="container">
+<div class="row">
+<div class="span12">
+            <h1 class="heading-page">{{(cms | async)?.unlockPortalIRUHeaderTitle}}</h1>
+            <h2 class="heading-sub-section">{{(cms | async)?.currentStatusLabel}} - {{orderStatus?.unlockStatus}}</h2>
+            <p [innerHTML]="((cms | async)?.pendingEmailConfirm)"><p>
+    <hr class="hr-dotted dark">
+    <div class="row">
+        <div class="span3">
+            <h5 class="heading-small-emphasis">{{(cms | async)?.imeiNumberLabel}}</h5>
+            <p>{{imeiNumber}}</p>
+        </div>
+        <div class="span3">
+            <h5 class="heading-small-emphasis">{{(cms | async)?.requestDateTimeLabel}}</h5>
+            <p>{{orderStatus?.orderSubmissionDate}}</p>
+        </div>
+        <div class="span3">
+            <h5 class="heading-small-emphasis">{{(cms | async)?.requestNumberStatusLabel}}</h5>
+            <p>{{orderStatus?.orderNumber}}</p>
+        </div>
+        <div class="span2">
+            <h5 class="heading-small-emphasis">{{(cms | async)?.currentStatusLabel}}</h5>
+            <p>{{orderStatus?.unlockStatus}}</p>
+        </div>                
+    </div>
+    <hr class="hr-dotted dark">
+</div>
+<div class="span3">
+    <div class="three-links">
+    <a routerLink="/unlock-canvas" >{{(cms | async)?.deviceUnlockSupportLabel}}</a>
+    <a routerLink="/unlock-status" >{{(cms | async)?.checkAnotherUnlockStatusLabel}}</a>
+    <a routerLink="/unlock-canvas" >{{(cms | async)?.unlockPortalPageHeaderTitle}}</a>
+    </div>
+</div>
+</div>
+</div>

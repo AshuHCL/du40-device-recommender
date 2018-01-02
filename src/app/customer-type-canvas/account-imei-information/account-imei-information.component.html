@@ -1,0 +1,39 @@
+<div class="container">
+    <step-indicator class="d-b" [cms]="(cms | async)" [stepIndex]="2" [customerType]="true"></step-indicator>
+    <div class="row">
+        <div class="span5">
+            <form class="account-form" #imeiForm="ngForm">
+                    <div class="form-row">
+                        <label for="imeiNumber">{{(cms | async)?.imeiLabel}}</label>
+                        <div class="field-group">
+                            <input id="IMEI" name="street2" class="span12" minlength="15" maxlength="15" (keyup)="validateNext($event)" placeholder="Ex: 12345678901234"
+                                [(ngModel)]="imeiNumber" type="text" aria-label="Apartment or suite number optional">
+                            <button class="reset-field" type="button" tabindex="-1" aria-label="Reset text field"></button>
+                        </div>
+                        <p class="required-text">
+                            <em [innerHTML]="((cms | async)?.ImeiCaptionHelpText)"></em>
+                        </p>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 40px;" *ngIf="showDeviceDetail">
+        <div class="span4">
+            <h5 class="heading-small-emphasis">{{(cms | async)?.modelLabel}}</h5>
+            <p>{{deviceModel}}</p>
+        </div>
+        <div class="span4">
+            <h5 class="heading-small-emphasis">{{(cms | async)?.makeLabel}}</h5>
+            <p>{{deviceMake}}</p>
+        </div>
+    </div>
+    <hr class="lite">
+    <h3 class="heading-small-content-emphasis">{{(cms | async)?.whatnextTitle}}</h3>
+    <p>{{(cms | async)?.whatnextInstructionLine1}}</p>
+    <p [innerHTML]="(cms | async)?.whatnextInstructionLine2"></p>
+    <hr class="lite">
+    <div class="cta-button-group nodots align-right">
+        <button [disabled]="isInvalid" class="btn btn-primary-functional" id="unlockSubmit" type="button" (click)="unlockNext()">{{(cms | async)?.submitButton}}</button>
+        <button class="btn btn-secondary" type="button" (click)="unlockPrevious()">{{(cms | async)?.backButton}}</button>
+    </div>
+</div>

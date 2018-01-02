@@ -1,0 +1,109 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoRetail';
+  src: url('fonts/font-icons/icon-retail.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-retail.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-retail.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-retail-"] {
+  font-family: 'icoRetail' !important;
+}
+.icon-retail-autopayL:before {
+  content: "\e900";
+}
+.icon-retail-autopay:before {
+  content: "\e901";
+}
+.icon-retail-costsL:before {
+  content: "\e902";
+}
+.icon-retail-costs:before {
+  content: "\e903";
+}
+.icon-retail-creditcardL:before {
+  content: "\e904";
+}
+.icon-retail-creditcard:before {
+  content: "\e905";
+}
+.icon-retail-galleryL:before {
+  content: "\e906";
+}
+.icon-retail-gallery:before {
+  content: "\e907";
+}
+.icon-retail-giftcardL:before {
+  content: "\e908";
+}
+.icon-retail-giftcard:before {
+  content: "\e909";
+}
+.icon-retail-hospitalityL:before {
+  content: "\e90a";
+}
+.icon-retail-hospitality:before {
+  content: "\e90b";
+}
+.icon-retail-hoteldiningL:before {
+  content: "\e90c";
+}
+.icon-retail-hoteldining:before {
+  content: "\e90d";
+}
+.icon-retail-newL:before {
+  content: "\e90e";
+}
+.icon-retail-new:before {
+  content: "\e90f";
+}
+.icon-retail-offersL:before {
+  content: "\e910";
+}
+.icon-retail-offers:before {
+  content: "\e911";
+}
+.icon-retail-payL:before {
+  content: "\e912";
+}
+.icon-retail-pay:before {
+  content: "\e913";
+}
+.icon-retail-restaurantL:before {
+  content: "\e914";
+}
+.icon-retail-restaurant:before {
+  content: "\e915";
+}
+.icon-retail-retailL:before {
+  content: "\e916";
+}
+.icon-retail-retail:before {
+  content: "\e917";
+}
+.icon-retail-shoppingcartL:before {
+  content: "\e918";
+}
+.icon-retail-shoppingcart:before {
+  content: "\e919";
+}
+.icon-retail-tag:before {
+  content: "\e91a";
+}
+.icon-retail-yourstay1L:before {
+  content: "\e91b";
+}
+.icon-retail-yourstay1:before {
+  content: "\e91c";
+}
+.icon-retail-yourstay2L:before {
+  content: "\e91d";
+}
+.icon-retail-yourstay2:before {
+  content: "\e91e";
+}
+.icon-retail-yourstay3L:before {
+  content: "\e91f";
+}
+.icon-retail-yourstay3:before {
+  content: "\e920";
+}

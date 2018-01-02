@@ -1,0 +1,11 @@
+{
+    "orderFlowResponseDO": {
+        "orderId": "CUL71XXX1059703",
+        "ssnValidation": false,
+        "requestNo": "CUL71XXX1059703",
+        "skipFlag": false,
+        "orderCreationDate": "2017-11-22T08:14:32.592-08:00",
+        "orderSubmissionDate": "2017-11-22T08:14:32.593-08:00",
+        "passcodeValidation": false
+    }
+}

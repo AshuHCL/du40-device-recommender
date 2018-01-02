@@ -1,0 +1,19 @@
+<div class="container">
+    <step-indicator class="d-b" [cms]="(cms | async)" [stepIndex]="3" [customerType]="customerType"></step-indicator> 
+    <div class="span12">
+        <div class="step-sub-heading step-confirmation">
+            <div class="row-nowrap align-items-center">
+                <i class="icon-controls-approvalL icon-large hidden-phone" role="img" aria-hidden="true"></i>
+                <i class="icon-controls-approval icon-small visible-phone" role="img" aria-hidden="true"></i>
+                <h2 class="heading-sub-section">{{(cms | async)?.thankUPageTitle}}</h2>
+            </div>
+        </div>
+        <hr class="hr-dotted dark">
+        <div class="confirmation-within-process">
+            <p>1. {{(cms | async)?.step1ToFollowOnThankUPage}}</p>
+            <p>2. {{(cms | async)?.step2ToFollowOnThankUPage}}</p>
+            <p>3. {{(cms | async)?.step3ToFollowOnThankUPagePart1}} <b>{{requestNo}}</b> {{(cms | async)?.step3ToFollowOnThankUPagePart2}}</p><br/>
+            <p>{{(cms | async)?.step4ToFollowOnThankUPage}}</p>
+        </div>
+    </div>
+</div>

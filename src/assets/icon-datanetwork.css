@@ -1,0 +1,349 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoDatanetwork';
+  src: url('fonts/font-icons/icon-datanetwork.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-datanetwork.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-datanetwork.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-datanetwork-"] {
+  font-family: 'icoDatanetwork' !important;
+}
+.icon-datanetwork-addrepeater:before {
+  content: "\e900";
+}
+.icon-datanetwork-addrepeaterL:before {
+  content: "\e901";
+}
+.icon-datanetwork-apis:before {
+  content: "\e902";
+}
+.icon-datanetwork-apisL:before {
+  content: "\e903";
+}
+.icon-datanetwork-bug:before {
+  content: "\e904";
+}
+.icon-datanetwork-cloud:before {
+  content: "\e905";
+}
+.icon-datanetwork-clouddownload:before {
+  content: "\e906";
+}
+.icon-datanetwork-clouddownloadL:before {
+  content: "\e907";
+}
+.icon-datanetwork-cloudL:before {
+  content: "\e908";
+}
+.icon-datanetwork-cloudupload:before {
+  content: "\e909";
+}
+.icon-datanetwork-clouduploadL:before {
+  content: "\e90a";
+}
+.icon-datanetwork-code:before {
+  content: "\e90b";
+}
+.icon-datanetwork-computerasservice:before {
+  content: "\e90c";
+}
+.icon-datanetwork-computerasserviceL:before {
+  content: "\e90d";
+}
+.icon-datanetwork-connectrepeaters:before {
+  content: "\e90e";
+}
+.icon-datanetwork-connectrepeatersL:before {
+  content: "\e90f";
+}
+.icon-datanetwork-contentdelivery:before {
+  content: "\e910";
+}
+.icon-datanetwork-contentdeliveryL:before {
+  content: "\e911";
+}
+.icon-datanetwork-database:before {
+  content: "\e912";
+}
+.icon-datanetwork-databaseL:before {
+  content: "\e913";
+}
+.icon-datanetwork-datashare:before {
+  content: "\e914";
+}
+.icon-datanetwork-datashareL:before {
+  content: "\e915";
+}
+.icon-datanetwork-datausage:before {
+  content: "\e916";
+}
+.icon-datanetwork-datausageL:before {
+  content: "\e917";
+}
+.icon-datanetwork-datavis:before {
+  content: "\e918";
+}
+.icon-datanetwork-datavisL:before {
+  content: "\e919";
+}
+.icon-datanetwork-dect6:before {
+  content: "\e91a";
+}
+.icon-datanetwork-dect6L:before {
+  content: "\e91b";
+}
+.icon-datanetwork-dialiupintsup:before {
+  content: "\e91c";
+}
+.icon-datanetwork-dialiupintsupL:before {
+  content: "\e91d";
+}
+.icon-datanetwork-dialupinternet:before {
+  content: "\e91e";
+}
+.icon-datanetwork-dialupinternetL:before {
+  content: "\e91f";
+}
+.icon-datanetwork-ecommerce:before {
+  content: "\e920";
+}
+.icon-datanetwork-ecommerceL:before {
+  content: "\e921";
+}
+.icon-datanetwork-eightlineop:before {
+  content: "\e922";
+}
+.icon-datanetwork-eightlineopL:before {
+  content: "\e923";
+}
+.icon-datanetwork-email:before {
+  content: "\e924";
+}
+.icon-datanetwork-emailL:before {
+  content: "\e925";
+}
+.icon-datanetwork-emailsetup:before {
+  content: "\e926";
+}
+.icon-datanetwork-emailsetupL:before {
+  content: "\e927";
+}
+.icon-datanetwork-emailsupport:before {
+  content: "\e928";
+}
+.icon-datanetwork-emailsupportL:before {
+  content: "\e929";
+}
+.icon-datanetwork-ethernet:before {
+  content: "\e92a";
+}
+.icon-datanetwork-ethernetL:before {
+  content: "\e92b";
+}
+.icon-datanetwork-externalstorage:before {
+  content: "\e92c";
+}
+.icon-datanetwork-externalstorageL:before {
+  content: "\e92d";
+}
+.icon-datanetwork-firewall:before {
+  content: "\e92e";
+}
+.icon-datanetwork-firewallL:before {
+  content: "\e92f";
+}
+.icon-datanetwork-fourlineop:before {
+  content: "\e930";
+}
+.icon-datanetwork-fourlineopL:before {
+  content: "\e931";
+}
+.icon-datanetwork-gateway:before {
+  content: "\e932";
+}
+.icon-datanetwork-gatewayL:before {
+  content: "\e933";
+}
+.icon-datanetwork-globalnetwork:before {
+  content: "\e934";
+}
+.icon-datanetwork-globalnetworkalert:before {
+  content: "\e935";
+}
+.icon-datanetwork-globalnetworkalertL:before {
+  content: "\e936";
+}
+.icon-datanetwork-globalnetworkL:before {
+  content: "\e937";
+}
+.icon-datanetwork-globalnetworkoffline:before {
+  content: "\e938";
+}
+.icon-datanetwork-globalnetworkofflineL:before {
+  content: "\e939";
+}
+.icon-datanetwork-history:before {
+  content: "\e93a";
+}
+.icon-datanetwork-hosting:before {
+  content: "\e93b";
+}
+.icon-datanetwork-hostingL:before {
+  content: "\e93c";
+}
+.icon-datanetwork-internet:before {
+  content: "\e93d";
+}
+.icon-datanetwork-internetL:before {
+  content: "\e93e";
+}
+.icon-datanetwork-internetsupport:before {
+  content: "\e93f";
+}
+.icon-datanetwork-internetsupportL:before {
+  content: "\e940";
+}
+.icon-datanetwork-lan:before {
+  content: "\e941";
+}
+.icon-datanetwork-lanL:before {
+  content: "\e942";
+}
+.icon-datanetwork-link:before {
+  content: "\e943";
+}
+.icon-datanetwork-lockedmailbox:before {
+  content: "\e944";
+}
+.icon-datanetwork-lockedmailboxL:before {
+  content: "\e945";
+}
+.icon-datanetwork-messagecounter:before {
+  content: "\e946";
+}
+.icon-datanetwork-messagecounterL:before {
+  content: "\e947";
+}
+.icon-datanetwork-messaging2:before {
+  content: "\e948";
+}
+.icon-datanetwork-messaging2L:before {
+  content: "\e949";
+}
+.icon-datanetwork-mobilehotspot:before {
+  content: "\e94a";
+}
+.icon-datanetwork-mobilehotspotL:before {
+  content: "\e94b";
+}
+.icon-datanetwork-mobiletower:before {
+  content: "\e94c";
+}
+.icon-datanetwork-mobiletowerL:before {
+  content: "\e94d";
+}
+.icon-datanetwork-router:before {
+  content: "\e94e";
+}
+.icon-datanetwork-routerL:before {
+  content: "\e94f";
+}
+.icon-datanetwork-satellite:before {
+  content: "\e950";
+}
+.icon-datanetwork-satellitedish:before {
+  content: "\e951";
+}
+.icon-datanetwork-satellitedishL:before {
+  content: "\e952";
+}
+.icon-datanetwork-satellitedishsupport:before {
+  content: "\e953";
+}
+.icon-datanetwork-satellitedishsupportL:before {
+  content: "\e954";
+}
+.icon-datanetwork-satelliteL:before {
+  content: "\e955";
+}
+.icon-datanetwork-server:before {
+  content: "\e956";
+}
+.icon-datanetwork-serverL:before {
+  content: "\e957";
+}
+.icon-datanetwork-simcard:before {
+  content: "\e958";
+}
+.icon-datanetwork-simcardL:before {
+  content: "\e959";
+}
+.icon-datanetwork-smartreceptacle:before {
+  content: "\e95a";
+}
+.icon-datanetwork-software:before {
+  content: "\e95b";
+}
+.icon-datanetwork-softwareasaservice:before {
+  content: "\e95c";
+}
+.icon-datanetwork-softwareasaserviceL:before {
+  content: "\e95d";
+}
+.icon-datanetwork-softwareL:before {
+  content: "\e95e";
+}
+.icon-datanetwork-transferdata:before {
+  content: "\e95f";
+}
+.icon-datanetwork-transferdataL:before {
+  content: "\e960";
+}
+.icon-datanetwork-twolineop:before {
+  content: "\e961";
+}
+.icon-datanetwork-twolineopL:before {
+  content: "\e962";
+}
+.icon-datanetwork-utilitiesoffline:before {
+  content: "\e963";
+}
+.icon-datanetwork-utilitiesofflineL:before {
+  content: "\e964";
+}
+.icon-datanetwork-vpn:before {
+  content: "\e965";
+}
+.icon-datanetwork-vpnL:before {
+  content: "\e966";
+}
+.icon-datanetwork-website:before {
+  content: "\e967";
+}
+.icon-datanetwork-websiteL:before {
+  content: "\e968";
+}
+.icon-datanetwork-wifi:before {
+  content: "\e969";
+}
+.icon-datanetwork-wifi-calling:before {
+  content: "\e96a";
+}
+.icon-datanetwork-wifi-callingL:before {
+  content: "\e96b";
+}
+.icon-datanetwork-wifiL:before {
+  content: "\e96c";
+}
+.icon-datanetwork-wifilancard:before {
+  content: "\e96d";
+}
+.icon-datanetwork-wifilancardL:before {
+  content: "\e96e";
+}
+.icon-datanetwork-wifisupport:before {
+  content: "\e96f";
+}
+.icon-datanetwork-wifisupportL:before {
+  content: "\e970";
+}

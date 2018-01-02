@@ -1,0 +1,24 @@
+{
+  "response": {
+    "redirectKey": null,
+    "errors": null,
+    "status": "success",
+    "subStatus": null,
+    "redirectURL": null,
+    "redirect": false
+  },
+  "payload": {
+    "deviceMake": "SAMSUNG",
+    "ctn": "4074131608",
+    "deviceSkuId": "sku7120234",
+    "sharedDataGroupSocCode": null,
+    "uom": "GB",
+    "color": "Charcoal Black",
+    "deviceType": "pda",
+    "subscriberName": "ATT OLAM",
+    "deviceModel": "SM-G900A",
+    "subscriberStatus": "A",
+    "planSocCode": "SDDVRP",
+    "size": 16
+  }
+}

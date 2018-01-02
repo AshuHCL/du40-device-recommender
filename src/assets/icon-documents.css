@@ -1,0 +1,214 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoDocuments';
+  src: url('fonts/font-icons/icon-documents.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-documents.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-documents.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-documents-"] {
+  font-family: 'icoDocuments' !important;
+}
+.icon-documents-addfileL:before {
+  content: "\e901";
+}
+.icon-documents-addfile:before {
+  content: "\e900";
+}
+.icon-documents-addfolder:before {
+  content: "\e902";
+}
+.icon-documents-addressbookL:before {
+  content: "\e904";
+}
+.icon-documents-addressbook:before {
+  content: "\e903";
+}
+.icon-documents-addtosaved:before {
+  content: "\e905";
+}
+.icon-documents-applicationsL:before {
+  content: "\e907";
+}
+.icon-documents-applications:before {
+  content: "\e906";
+}
+.icon-documents-archive:before {
+  content: "\e908";
+}
+.icon-documents-archivebox:before {
+  content: "\e909";
+}
+.icon-documents-billingL:before {
+  content: "\e90b";
+}
+.icon-documents-billing:before {
+  content: "\e90a";
+}
+.icon-documents-bookL:before {
+  content: "\e90d";
+}
+.icon-documents-book:before {
+  content: "\e90c";
+}
+.icon-documents-bookmark:before {
+  content: "\e90e";
+}
+.icon-documents-browseL:before {
+  content: "\e910";
+}
+.icon-documents-browse:before {
+  content: "\e90f";
+}
+.icon-documents-checklistL:before {
+  content: "\e912";
+}
+.icon-documents-checklist:before {
+  content: "\e911";
+}
+.icon-documents-clipboardL:before {
+  content: "\e915";
+}
+.icon-documents-clipboard2:before {
+  content: "\e914";
+}
+.icon-documents-clipboard:before {
+  content: "\e913";
+}
+.icon-documents-copy:before {
+  content: "\e916";
+}
+.icon-documents-cut:before {
+  content: "\e917";
+}
+.icon-documents-documentL:before {
+  content: "\e919";
+}
+.icon-documents-document:before {
+  content: "\e918";
+}
+.icon-documents-downloadableaddressbookL:before {
+  content: "\e942";
+}
+.icon-documents-downloadableaddressbook:before {
+  content: "\e943";
+}
+.icon-documents-downloadablefileL:before {
+  content: "\e91b";
+}
+.icon-documents-downloadablefile:before {
+  content: "\e91a";
+}
+.icon-documents-favoritesL:before {
+  content: "\e91d";
+}
+.icon-documents-favorites:before {
+  content: "\e91c";
+}
+.icon-documents-fileL:before {
+  content: "\e91f";
+}
+.icon-documents-file:before {
+  content: "\e91e";
+}
+.icon-documents-folderL:before {
+  content: "\e921";
+}
+.icon-documents-folder:before {
+  content: "\e920";
+}
+.icon-documents-growthchartL:before {
+  content: "\e923";
+}
+.icon-documents-growthchart:before {
+  content: "\e922";
+}
+.icon-documents-inbox:before {
+  content: "\e924";
+}
+.icon-documents-manualL:before {
+  content: "\e926";
+}
+.icon-documents-manual:before {
+  content: "\e925";
+}
+.icon-documents-mediastorageL:before {
+  content: "\e928";
+}
+.icon-documents-mediastorage:before {
+  content: "\e927";
+}
+.icon-documents-movetoinbox:before {
+  content: "\e929";
+}
+.icon-documents-mynotesL:before {
+  content: "\e92b";
+}
+.icon-documents-mynotes:before {
+  content: "\e92a";
+}
+.icon-documents-networkfolderL:before {
+  content: "\e92d";
+}
+.icon-documents-networkfolder:before {
+  content: "\e92c";
+}
+.icon-documents-paperlessbilling:before {
+  content: "\e92e";
+}
+.icon-documents-paymentL:before {
+  content: "\e930";
+}
+.icon-documents-payment:before {
+  content: "\e92f";
+}
+.icon-documents-pdfL:before {
+  content: "\e932";
+}
+.icon-documents-pdf:before {
+  content: "\e931";
+}
+.icon-documents-playlibraryL:before {
+  content: "\e934";
+}
+.icon-documents-playlibrary:before {
+  content: "\e933";
+}
+.icon-documents-playlistL:before {
+  content: "\e935";
+}
+.icon-documents-removefromsaved:before {
+  content: "\e936";
+}
+.icon-documents-removefromwatchlist:before {
+  content: "\e937";
+}
+.icon-documents-reportL:before {
+  content: "\e939";
+}
+.icon-documents-report:before {
+  content: "\e938";
+}
+.icon-documents-resourcesL:before {
+  content: "\e93b";
+}
+.icon-documents-resources:before {
+  content: "\e93a";
+}
+.icon-documents-salesreportL:before {
+  content: "\e93d";
+}
+.icon-documents-salesreport:before {
+  content: "\e93c";
+}
+.icon-documents-saveforlater:before {
+  content: "\e93e";
+}
+.icon-documents-searchfindL:before {
+  content: "\e940";
+}
+.icon-documents-searchfind:before {
+  content: "\e93f";
+}
+.icon-documents-unarchive:before {
+  content: "\e941";
+}

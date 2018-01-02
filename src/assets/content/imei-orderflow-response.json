@@ -1,0 +1,8 @@
+{
+    "orderFlowResponseDO": {
+        "currentFlow": "NON_ATT_ORDER_VALIDATION_FLOW",
+        "ssnValidation": false,
+        "skipFlag": false,
+        "passcodeValidation": false
+    }
+}

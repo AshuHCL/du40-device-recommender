@@ -1,0 +1,21 @@
+@import '../../app.component.scss';
+
+.three-links a {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.heading-page {
+  margin-top: 30px;
+}
+
+.heading-sub-section {
+  color: rgb(0, 122, 62);
+}
+
+@media (min-width:768px) {
+    /* Tab and Desktop */
+    .row {
+      display: block;
+    }
+}

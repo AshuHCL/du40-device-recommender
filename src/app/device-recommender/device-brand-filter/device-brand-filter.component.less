@@ -1,0 +1,148 @@
+@import '../device-recommender.component.less';
+
+.device-filter-container {
+
+	// Device filter
+	.device-filter {
+		display: flex;
+		flex-direction: column;
+		color: @white;
+		background-color: @acc-backgroundColor;
+		margin-top: 2.5rem;
+		margin-bottom: 1.5rem;
+
+		// Filter dropdown
+		.device-filter-header {
+			background-color: transparent;
+			color: inherit;
+			border: none;
+			cursor: pointer;
+			font-size: 1.6rem;
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+			height: 7rem;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			font-family: @att-font-medium;
+			
+			.device-filter-label {
+				background-color: transparent; // Overrides initial button styling
+				color: inherit; // Overrides initial button styling
+				border: none; // Overrides initial button styling
+				padding: 0; // Overrides initial button styling
+				font: inherit; // Overrides initial button styling
+				
+				&:focus, &:active {
+					outline: .1rem dotted #ffffff;
+					outline-offset: .5rem;
+				}
+			}
+
+			.device-filter-clear {
+				background-color: transparent; // Overrides initial button styling
+				color: #2882f1;
+				border: none; // Overrides initial button styling
+				padding: 0; // Overrides initial button styling
+				font: inherit; // Overrides initial button styling
+				cursor: pointer;
+				margin-left: 1.5rem;
+
+				&:hover {
+					color: #ffffff;
+				}
+
+				&:focus, &:active {
+					outline: .1rem dotted #ffffff;
+					outline-offset: .5rem;
+				}
+
+			}
+
+			.device-filter-arrow {
+				color: #2882f1;
+				margin-left: 1rem;
+				margin-right: 0; // Overrides DS2 style
+				transition: all 0.25s ease-in-out;
+			}
+
+		}
+
+		// Filter options
+		.device-filter-body {
+			font-family: @att-font;
+			display: none;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			padding-left: 2.5rem;
+
+			.device-filter-option {
+				cursor: initial;
+				margin-bottom: 3rem;
+				color: @white;
+			}
+
+			// Overriding the global css to change the checkbox skin border color to white
+			.device-filter-option input:focus + .skin:before {
+				outline: 1px dotted #ffffff !important;
+			}
+
+			.device-filter-option-text {
+				width: 16rem;
+				word-wrap: break-word;
+			}
+		}
+
+		.device-filter-hairline {
+			display: none;
+			background-color: #3c3c3c;
+			margin: 0 0 2.5rem; // Overrides DS2 margin
+		}
+
+		// Filter expanded
+		&.drawer-open {
+
+			.device-filter-header {
+
+				.device-filter-arrow {
+					transform: rotate(-180deg);
+				}
+			}
+
+			.device-filter-hairline {
+				display: block;
+			}
+
+			.device-filter-body {
+				display: flex;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.device-filter-container {
+		padding-left: 0;
+		padding-right: 0;
+
+		.device-filter {
+			margin-top: 0;
+			margin-bottom: 0;
+
+			.device-filter-hairline {
+				display: none !important; // Hairline should never be visible on mobile viewport
+			}
+
+			.device-filter-body {
+				padding-bottom: .5rem;
+				flex-direction: column;
+				flex-wrap: nowrap;
+
+				.device-filter-option {
+					margin-bottom: 2rem; // Overrides DS2 style
+				}
+			}
+
+		}
+	}
+}

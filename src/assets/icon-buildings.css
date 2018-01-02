@@ -1,0 +1,160 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoBuilding';
+  src: url('fonts/font-icons/icon-buildings.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-buildings.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-buildings.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-building"] {
+  font-family: 'icoBuilding' !important;
+}
+.icon-building-away:before {
+  content: "\e900";
+}
+.icon-building-awayL:before {
+  content: "\e901";
+}
+.icon-building-city:before {
+  content: "\e902";
+}
+.icon-building-cityL:before {
+  content: "\e903";
+}
+.icon-building-door:before {
+  content: "\e904";
+}
+.icon-building-doorL:before {
+  content: "\e905";
+}
+.icon-building-drapes:before {
+  content: "\e906";
+}
+.icon-building-factory:before {
+  content: "\e907";
+}
+.icon-building-factoryL:before {
+  content: "\e908";
+}
+.icon-building-financial-institution:before {
+  content: "\e909";
+}
+.icon-building-financial-institutionL:before {
+  content: "\e90a";
+}
+.icon-building-garage:before {
+  content: "\e90b";
+}
+.icon-building-garagedoorsensor:before {
+  content: "\e90c";
+}
+.icon-building-garagedoorsensorL:before {
+  content: "\e90d";
+}
+.icon-building-garageL:before {
+  content: "\e90e";
+}
+.icon-building-government:before {
+  content: "\e90f";
+}
+.icon-building-governmentL:before {
+  content: "\e910";
+}
+.icon-building-home:before {
+  content: "\e911";
+}
+.icon-building-homeL:before {
+  content: "\e912";
+}
+.icon-building-home-sec-auto:before {
+  content: "\e913";
+}
+.icon-building-home-sec-autoL:before {
+  content: "\e914";
+}
+.icon-building-hotel:before {
+  content: "\e915";
+}
+.icon-building-hotelL:before {
+  content: "\e916";
+}
+.icon-building-largebuilding:before {
+  content: "\e917";
+}
+.icon-building-largebuildingL:before {
+  content: "\e918";
+}
+.icon-building-largehouse:before {
+  content: "\e919";
+}
+.icon-building-largehouseL:before {
+  content: "\e91a";
+}
+.icon-building-medicalfacility:before {
+  content: "\e91b";
+}
+.icon-building-medicalfacilityL:before {
+  content: "\e91c";
+}
+.icon-building-midsizedbuilding:before {
+  content: "\e91d";
+}
+.icon-building-midsizedbuildingL:before {
+  content: "\e91e";
+}
+.icon-building-mobileworkplace:before {
+  content: "\e91f";
+}
+.icon-building-mobileworkplaceL:before {
+  content: "\e920";
+}
+.icon-building-shades:before {
+  content: "\e921";
+}
+.icon-building-shadesclosed:before {
+  content: "\e922";
+}
+.icon-building-shadesL:before {
+  content: "\e923";
+}
+.icon-building-smallbuilding:before {
+  content: "\e924";
+}
+.icon-building-smallbuildingL:before {
+  content: "\e925";
+}
+.icon-building-smallbusiness:before {
+  content: "\e926";
+}
+.icon-building-smallbusinessL:before {
+  content: "\e927";
+}
+.icon-building-stadium:before {
+  content: "\e928";
+}
+.icon-building-stadiumL:before {
+  content: "\e929";
+}
+.icon-building-takeoverrange:before {
+  content: "\e92a";
+}
+.icon-building-takeoverrangeL:before {
+  content: "\e92b";
+}
+.icon-building-totalhomedvr:before {
+  content: "\e92c";
+}
+.icon-building-totalhomedvrL:before {
+  content: "\e92d";
+}
+.icon-building-warehouse:before {
+  content: "\e92e";
+}
+.icon-building-warehouseL:before {
+  content: "\e92f";
+}
+.icon-building-water-tower:before {
+  content: "\e930";
+}
+.icon-building-water-towerL:before {
+  content: "\e931";
+}

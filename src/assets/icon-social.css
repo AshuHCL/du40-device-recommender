@@ -1,0 +1,101 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoSocial';
+  src: url('fonts/font-icons/icon-social.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-social.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-social.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-social"] {
+  font-family: 'icoSocial' !important;
+}
+.icon-social-share-this:before {
+  content: "\e900";
+}
+.icon-social-email:before {
+  content: "\e901";
+  color: #ea7400;
+}
+.icon-social-facebook:before {
+  content: "\e902";
+  color: #3B5999;
+}
+.icon-social-facebookL:before {
+  content: "\e903";
+  color: #3B5999;
+}
+.icon-social-instagram:before {
+  content: "\e904";
+  color: #702F8A;
+}
+.icon-social-instagramL:before {
+  content: "\e905";
+  color: #702F8A;
+}
+.icon-social-linkedin:before {
+  content: "\e906";
+  color: #066C9A;
+}
+.icon-social-linkedinL:before {
+  content: "\e907";
+  color: #066C9A;
+}
+.icon-social-pinterest:before {
+  content: "\e908";
+  color: #BD081C;
+}
+.icon-social-pinterestL:before {
+  content: "\e909";
+  color: #BD081C;
+}
+.icon-social-sms:before {
+  content: "\e90a";
+  color: #007A3E;
+}
+.icon-social-twitter:before {
+  content: "\e90b";
+  color: #2AA9E0;
+}
+.icon-social-twitterL:before {
+  content: "\e90c";
+  color: #2AA9E0;
+}
+.icon-social-youtube:before {
+  content: "\e90d";
+  color: #CD201F;
+}
+.icon-social-youtube-path1:before {
+  content: "\e90e";
+  color: #CD201F;
+}
+.icon-social-youtube-path2:before {
+  content: "\e90f";
+  color: #E0E0E0;
+}
+.dark-bg .icon-social-youtubeL-path2:before {
+  color: #000 !important;
+}
+.icon-social-youtubeL:before {
+  content: "\e910";
+  color: #CD201F;
+}
+.icon-social-youtubeL-path1:before {
+  content: "\e911";
+  color: #CD201F;
+}
+.icon-social-youtubeL-path2:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-social-youtube-full:before {
+  content: "\e913";
+  color: #333;
+  margin-left: 0;
+}
+.icon-social-youtube-full-path1:before {
+  content: "\e914";
+  color: #E62117;
+}
+.icon-social-youtube-full-path2:before {
+  content: "\e915";
+  color: #E62117;
+}

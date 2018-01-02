@@ -1,0 +1,145 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoSecurityalerts';
+  src: url('fonts/font-icons/icon-securityalerts.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-securityalerts.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-securityalerts.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-securityalerts-"] {
+  font-family: 'icoSecurityalerts' !important;
+}
+.icon-securityalerts-alertL:before {
+  content: "\e900";
+}
+.icon-securityalerts-alertlistenerL:before {
+  content: "\e901";
+}
+.icon-securityalerts-alertlistener:before {
+  content: "\e902";
+}
+.icon-securityalerts-careurgentalert:before {
+  content: "\e903";
+}
+.icon-securityalerts-cosensorL:before {
+  content: "\e904";
+}
+.icon-securityalerts-cosensor:before {
+  content: "\e905";
+}
+.icon-securityalerts-cosensoralertL:before {
+  content: "\e906";
+}
+.icon-securityalerts-cosensoralert:before {
+  content: "\e907";
+}
+.icon-securityalerts-contactsensorL:before {
+  content: "\e908";
+}
+.icon-securityalerts-contactsensor:before {
+  content: "\e909";
+}
+.icon-securityalerts-contactsensoralertL:before {
+  content: "\e90a";
+}
+.icon-securityalerts-contactsensoralert:before {
+  content: "\e90b";
+}
+.icon-securityalerts-contactsensoroffline:before {
+  content: "\e90c";
+}
+.icon-securityalerts-doorlockL:before {
+  content: "\e90d";
+}
+.icon-securityalerts-doorlock:before {
+  content: "\e90e";
+}
+.icon-securityalerts-doorlockoffline:before {
+  content: "\e90f";
+}
+.icon-securityalerts-doorlockopen:before {
+  content: "\e910";
+}
+.icon-securityalerts-firesmokesensorL:before {
+  content: "\e911";
+}
+.icon-securityalerts-firesmokesensor:before {
+  content: "\e912";
+}
+.icon-securityalerts-glassbreaksensorL:before {
+  content: "\e913";
+}
+.icon-securityalerts-glassbreaksensor:before {
+  content: "\e914";
+}
+.icon-securityalerts-globalsecurityL:before {
+  content: "\e915";
+}
+.icon-securityalerts-globalsecurity:before {
+  content: "\e916";
+}
+.icon-securityalerts-keyaccessL:before {
+  content: "\e917";
+}
+.icon-securityalerts-keyaccess:before {
+  content: "\e918";
+}
+.icon-securityalerts-nationalsecurityL:before {
+  content: "\e919";
+}
+.icon-securityalerts-nationalsecurity:before {
+  content: "\e91a";
+}
+.icon-securityalerts-parentallockL:before {
+  content: "\e91b";
+}
+.icon-securityalerts-parentallock:before {
+  content: "\e91c";
+}
+.icon-securityalerts-parentallocksetupL:before {
+  content: "\e91d";
+}
+.icon-securityalerts-parentallocksetup:before {
+  content: "\e91e";
+}
+.icon-securityalerts-parentalsecurityL:before {
+  content: "\e91f";
+}
+.icon-securityalerts-parentalsecurity:before {
+  content: "\e920";
+}
+.icon-securityalerts-personalsecurityL:before {
+  content: "\e921";
+}
+.icon-securityalerts-personalsecurity:before {
+  content: "\e922";
+}
+.icon-securityalerts-securityL:before {
+  content: "\e923";
+}
+.icon-securityalerts-security:before {
+  content: "\e924";
+}
+.icon-securityalerts-smartsecurityL:before {
+  content: "\e925";
+}
+.icon-securityalerts-smartsecurity:before {
+  content: "\e926";
+}
+.icon-securityalerts-smokesensoralertL:before {
+  content: "\e927";
+}
+.icon-securityalerts-smokesensoralert:before {
+  content: "\e928";
+}
+.icon-securityalerts-watershutoffclosed:before {
+  content: "\e929";
+}
+.icon-securityalerts-watershutoffoffline:before {
+  content: "\e92a";
+}
+.icon-securityalerts-watershutoffvalveL:before {
+  content: "\e92b";
+}
+.icon-securityalerts-watershutoffvalve:before {
+  content: "\e92c";
+}

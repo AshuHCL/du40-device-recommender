@@ -1,0 +1,17 @@
+@import '../app.component.scss';
+wireless-number{
+    display: inline-block;
+    padding: 20px 0;
+}
+
+.d-b {
+    display: block;
+}
+
+@media (min-width:768px) {
+    /* Tab and Desktop */
+    wireless-number{
+        padding: 50px 0;
+    }
+}
+

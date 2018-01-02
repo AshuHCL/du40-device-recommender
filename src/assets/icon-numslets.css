@@ -1,0 +1,151 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoNumslets';
+  src: url('fonts/font-icons/icon-numslets.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-numslets.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-numslets.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-numslets-"] {
+  font-family: 'icoNumslets' !important;
+}
+.icon-numslets-casesensitiveL:before {
+  content: "\e900";
+}
+.icon-numslets-casesensitive:before {
+  content: "\e901";
+}
+.icon-numslets-linear-0:before {
+  content: "\e902";
+}
+.icon-numslets-number-0:before {
+  content: "\e903";
+}
+.icon-numslets-flat-0:before {
+  content: "\e904";
+}
+.icon-numslets-linear-1:before {
+  content: "\e905";
+}
+.icon-numslets-number-1:before {
+  content: "\e906";
+}
+.icon-numslets-flat-1:before {
+  content: "\e907";
+}
+.icon-numslets-linear-2:before {
+  content: "\e908";
+}
+.icon-numslets-number-2:before {
+  content: "\e909";
+}
+.icon-numslets-flat-2:before {
+  content: "\e90a";
+}
+.icon-numslets-linear-3:before {
+  content: "\e90b";
+}
+.icon-numslets-number-3:before {
+  content: "\e90c";
+}
+.icon-numslets-flat-3:before {
+  content: "\e90d";
+}
+.icon-numslets-linear-4:before {
+  content: "\e90e";
+}
+.icon-numslets-number-4:before {
+  content: "\e90f";
+}
+.icon-numslets-flat-4:before {
+  content: "\e910";
+}
+.icon-numslets-linear-5:before {
+  content: "\e911";
+}
+.icon-numslets-number-5:before {
+  content: "\e912";
+}
+.icon-numslets-flat-5:before {
+  content: "\e913";
+}
+.icon-numslets-linear-6:before {
+  content: "\e914";
+}
+.icon-numslets-number-6:before {
+  content: "\e915";
+}
+.icon-numslets-flat-6:before {
+  content: "\e916";
+}
+.icon-numslets-linear-7:before {
+  content: "\e917";
+}
+.icon-numslets-number-7:before {
+  content: "\e918";
+}
+.icon-numslets-flat-7:before {
+  content: "\e919";
+}
+.icon-numslets-linear-8:before {
+  content: "\e91a";
+}
+.icon-numslets-number-8:before {
+  content: "\e91b";
+}
+.icon-numslets-flat-8:before {
+  content: "\e91c";
+}
+.icon-numslets-linear-9:before {
+  content: "\e91d";
+}
+.icon-numslets-number-9:before {
+  content: "\e91e";
+}
+.icon-numslets-flat-9:before {
+  content: "\e91f";
+}
+.icon-numslets-linear-a:before {
+  content: "\e920";
+}
+.icon-numslets-letter-a:before {
+  content: "\e921";
+}
+.icon-numslets-flat-a:before {
+  content: "\e922";
+}
+.icon-numslets-linear-b:before {
+  content: "\e923";
+}
+.icon-numslets-letter-b:before {
+  content: "\e924";
+}
+.icon-numslets-flat-b:before {
+  content: "\e925";
+}
+.icon-numslets-linear-c:before {
+  content: "\e926";
+}
+.icon-numslets-letter-c:before {
+  content: "\e927";
+}
+.icon-numslets-flat-c:before {
+  content: "\e928";
+}
+.icon-numslets-linear-faq:before {
+  content: "\e929";
+}
+.icon-numslets-questionmark:before {
+  content: "\e92a";
+}
+.icon-numslets-flat-faq:before {
+  content: "\e92b";
+}
+.icon-numslets-linear-info:before {
+  content: "\e92c";
+}
+.icon-numslets-info:before {
+  content: "\e92d";
+}
+.icon-numslets-flat-info:before {
+  content: "\e92e";
+}

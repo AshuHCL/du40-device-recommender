@@ -1,0 +1,37 @@
+@import '../../../app.component.scss';
+
+.unlock-device {
+    padding: 30px 50px;
+    margin-bottom: 30px;
+}
+
+.unlock-device a {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.unlock-device-img,
+.unlock-status-img {
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+    width: 40px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+@media (min-width:768px) and (max-width:1024px) {}
+
+@media (min-width:768px) and (max-width:1024px) {}
+
+@media (min-width:768px) {
+    .unlock-device {
+        padding: 30px 50px;
+        margin-bottom: 0;
+    }
+    .unlock-device-img,
+    .unlock-status-img {
+        background-size: 100%;
+        width: 60px;
+        height: 45px; // background-image: url('../../assets/images/ico-unlock-blue-60x45.png');
+    }
+}

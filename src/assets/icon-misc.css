@@ -1,0 +1,297 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoMisc';
+  src: url('fonts/font-icons/icon-misc.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-misc.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-misc.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-misc-"] {
+  font-family: 'icoMisc' !important;
+}
+.icon-misc-alarmL:before {
+  content: "\e900";
+}
+.icon-misc-alarm:before {
+  content: "\e901";
+}
+.icon-misc-awardL:before {
+  content: "\e902";
+}
+.icon-misc-award:before {
+  content: "\e903";
+}
+.icon-misc-barrelL:before {
+  content: "\e904";
+}
+.icon-misc-barrel:before {
+  content: "\e905";
+}
+.icon-misc-brushL:before {
+  content: "\e906";
+}
+.icon-misc-bulbL:before,
+.icon-misc-ideationL:before {
+  content: "\e907";
+}
+.icon-misc-bulb:before,
+.icon-misc-ideation:before {
+  content: "\e908";
+}
+.icon-misc-businessL:before {
+  content: "\e909";
+}
+.icon-misc-business:before {
+  content: "\e90a";
+}
+.icon-misc-businesscontinuityL:before {
+  content: "\e90b";
+}
+.icon-misc-businesscontinuity:before {
+  content: "\e90c";
+}
+.icon-misc-calendarL:before {
+  content: "\e90d";
+}
+.icon-misc-calendar:before {
+  content: "\e90e";
+}
+.icon-misc-clothespinL:before {
+  content: "\e90f";
+}
+.icon-misc-clothespin:before {
+  content: "\e910";
+}
+.icon-misc-colorpalette:before {
+  content: "\e911";
+}
+.icon-misc-customersupportL:before {
+  content: "\e912";
+}
+.icon-misc-customersupport:before {
+  content: "\e913";
+}
+.icon-misc-datetimeL:before {
+  content: "\e914";
+}
+.icon-misc-datetime:before {
+  content: "\e915";
+}
+.icon-misc-dimmer:before {
+  content: "\e916";
+}
+.icon-misc-dimmeroff:before {
+  content: "\e917";
+}
+.icon-misc-environmentalL:before {
+  content: "\e918";
+}
+.icon-misc-environmental:before {
+  content: "\e919";
+}
+.icon-misc-eraserL:before {
+  content: "\e91a";
+}
+.icon-misc-farmingL:before {
+  content: "\e91b";
+}
+.icon-misc-farming:before {
+  content: "\e91c";
+}
+.icon-misc-featherL:before {
+  content: "\e91d";
+}
+.icon-misc-feather:before {
+  content: "\e91e";
+}
+.icon-misc-filter:before {
+  content: "\e91f";
+}
+.icon-misc-handgunL:before {
+  content: "\e920";
+}
+.icon-misc-handgun:before {
+  content: "\e921";
+}
+.icon-misc-hotwaterheater:before {
+  content: "\e922";
+}
+.icon-misc-housework:before {
+  content: "\e923";
+}
+.icon-misc-integrationL:before {
+  content: "\e926";
+}
+.icon-misc-integration:before {
+  content: "\e927";
+}
+.icon-misc-lawenforcementL:before {
+  content: "\e928";
+}
+.icon-misc-lawenforcement:before {
+  content: "\e929";
+}
+.icon-misc-legaldepartmentL:before {
+  content: "\e92a";
+}
+.icon-misc-legaldepartment:before {
+  content: "\e92b";
+}
+.icon-misc-lightsoffL:before {
+  content: "\e92c";
+}
+.icon-misc-lightsoff:before {
+  content: "\e92d";
+}
+.icon-misc-lightson:before {
+  content: "\e92e";
+}
+.icon-misc-magnetL:before {
+  content: "\e92f";
+}
+.icon-misc-magnet:before {
+  content: "\e930";
+}
+.icon-misc-maintenanceL:before {
+  content: "\e931";
+}
+.icon-misc-maintenance:before {
+  content: "\e932";
+}
+.icon-misc-mortarboardL:before {
+  content: "\e933";
+}
+.icon-misc-mortarboard:before {
+  content: "\e934";
+}
+.icon-misc-motiongraphics:before {
+  content: "\e935";
+}
+.icon-misc-mugL:before {
+  content: "\e936";
+}
+.icon-misc-mug:before {
+  content: "\e937";
+}
+.icon-misc-oilandgasL:before {
+  content: "\e938";
+}
+.icon-misc-oilandgas:before {
+  content: "\e939";
+}
+.icon-misc-operationsL:before {
+  content: "\e93a";
+}
+.icon-misc-operations:before {
+  content: "\e93b";
+}
+.icon-misc-party:before {
+  content: "\e93c";
+}
+.icon-misc-penL:before {
+  content: "\e93d";
+}
+.icon-misc-pen:before {
+  content: "\e93e";
+}
+.icon-misc-piechartL:before {
+  content: "\e93f";
+}
+.icon-misc-piechart:before {
+  content: "\e940";
+}
+.icon-misc-puzzleL:before {
+  content: "\e941";
+}
+.icon-misc-puzzle:before {
+  content: "\e942";
+}
+.icon-misc-stopwatchL:before {
+  content: "\e943";
+}
+.icon-misc-stopwatch:before {
+  content: "\e944";
+}
+.icon-misc-targetL:before {
+  content: "\e945";
+}
+.icon-misc-target:before {
+  content: "\e946";
+}
+.icon-misc-tempwatersensorL:before {
+  content: "\e947";
+}
+.icon-misc-tempwatersensor:before {
+  content: "\e948";
+}
+.icon-misc-time:before {
+  content: "\e949";
+}
+.icon-misc-timeL:before {
+  content: "\e94a";
+}
+.icon-misc-timeandmoneyL:before {
+  content: "\e94b";
+}
+.icon-misc-timeandmoney:before {
+  content: "\e94c";
+}
+.icon-misc-timetrigger:before {
+  content: "\e94d";
+}
+.icon-misc-toolsL:before {
+  content: "\e94e";
+}
+.icon-misc-tools:before {
+  content: "\e94f";
+}
+.icon-misc-trashL:before {
+  content: "\e950";
+}
+.icon-misc-trash:before {
+  content: "\e951";
+}
+.icon-misc-treeL:before {
+  content: "\e952";
+}
+.icon-misc-tree:before {
+  content: "\e953";
+}
+.icon-misc-trophyL:before {
+  content: "\e954";
+}
+.icon-misc-trophy:before {
+  content: "\e955";
+}
+.icon-misc-utilitiesL:before {
+  content: "\e956";
+}
+.icon-misc-utilities:before {
+  content: "\e957";
+}
+.icon-misc-verified:before {
+  content: "\e958";
+}
+.icon-misc-waterL:before {
+  content: "\e959";
+}
+.icon-misc-water:before {
+  content: "\e95a";
+}
+.icon-misc-waterbottleL:before {
+  content: "\e95b";
+}
+.icon-misc-waterbottle:before {
+  content: "\e95c";
+}
+.icon-misc-waterleakL:before {
+  content: "\e95d";
+}
+.icon-misc-waterleak:before {
+  content: "\e95e";
+}
+.icon-misc-watermainL:before {
+  content: "\e95f";
+}
+.icon-misc-watermain:before {
+  content: "\e960";
+}

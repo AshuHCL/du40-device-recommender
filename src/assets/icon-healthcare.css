@@ -1,0 +1,67 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoHealthcare';
+  src: url('fonts/font-icons/icon-healthcare.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-healthcare.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-healthcare.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-healthcare-"] {
+  font-family: 'icoHealthcare' !important;
+}
+.icon-healthcare-blooddevices:before {
+  content: "\e900";
+}
+.icon-healthcare-bodydevices:before {
+  content: "\e901";
+}
+.icon-healthcare-bpmonitor:before {
+  content: "\e902";
+}
+.icon-healthcare-dentalL:before {
+  content: "\e903";
+}
+.icon-healthcare-dental:before {
+  content: "\e904";
+}
+.icon-healthcare-glucometer:before {
+  content: "\e905";
+}
+.icon-healthcare-healthcareL:before {
+  content: "\e906";
+}
+.icon-healthcare-healthcare:before {
+  content: "\e907";
+}
+.icon-healthcare-inhalersensor:before {
+  content: "\e908";
+}
+.icon-healthcare-medicationL:before {
+  content: "\e909";
+}
+.icon-healthcare-medication:before {
+  content: "\e90a";
+}
+.icon-healthcare-nosmokingL:before {
+  content: "\e90b";
+}
+.icon-healthcare-nosmoking:before {
+  content: "\e90c";
+}
+.icon-healthcare-oximeter:before {
+  content: "\e90d";
+}
+.icon-healthcare-personalcareL:before {
+  content: "\e90e";
+}
+.icon-healthcare-personalcare:before {
+  content: "\e90f";
+}
+.icon-healthcare-scaleL:before {
+  content: "\e910";
+}
+.icon-healthcare-scale:before {
+  content: "\e911";
+}
+.icon-healthcare-thermometer:before {
+  content: "\e912";
+}

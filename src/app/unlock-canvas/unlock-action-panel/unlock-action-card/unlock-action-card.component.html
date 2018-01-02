@@ -1,0 +1,5 @@
+<div class="unlock-device">
+    <div class="unlock-device-img" routerLink="{{actionCard.link}}" [ngStyle]="{'background-image':'url('+actionCard?.img+')'}" style="cursor: pointer"></div>
+    <a routerLink="{{actionCard.link}}" >{{actionCard?.unlockyourDevice}}</a>
+    <div [innerHTML]="actionCard?.unlockDeviceDescription"></div>
+</div>

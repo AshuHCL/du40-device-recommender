@@ -1,0 +1,205 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+@font-face {
+  font-family: 'icoPeople';
+  src: url('fonts/font-icons/icon-people.woff2?timestamp=@@timestamp') format('woff2'), url('fonts/font-icons/icon-people.woff?timestamp=@@timestamp') format('woff'), url('fonts/font-icons/icon-people.ttf?timestamp=@@timestamp') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="icon-people-"] {
+  font-family: 'icoPeople' !important;
+}
+.icon-people-accountmanager:before {
+  content: "\e901";
+}
+.icon-people-activitydevicesL:before {
+  content: "\e902";
+}
+.icon-people-activitydevices:before {
+  content: "\e903";
+}
+.icon-people-browsebydate:before {
+  content: "\e904";
+}
+.icon-people-browsebytitle:before {
+  content: "\e905";
+}
+.icon-people-cognitive:before {
+  content: "\e906";
+}
+.icon-people-doorbellL:before {
+  content: "\e907";
+}
+.icon-people-doorbell:before {
+  content: "\e908";
+}
+.icon-people-effortlessL:before {
+  content: "\e909";
+}
+.icon-people-effortless:before {
+  content: "\e90a";
+}
+.icon-people-employeeidL:before {
+  content: "\e90b";
+}
+.icon-people-employeeid:before {
+  content: "\e90c";
+}
+.icon-people-exerciseL:before {
+  content: "\e90d";
+}
+.icon-people-exercise:before {
+  content: "\e90e";
+}
+.icon-people-exitL:before {
+  content: "\e90f";
+}
+.icon-people-exit:before {
+  content: "\e910";
+}
+.icon-people-feedbackL:before {
+  content: "\e911";
+}
+.icon-people-feedback:before {
+  content: "\e912";
+}
+.icon-people-gesturemode:before {
+  content: "\e913";
+}
+.icon-people-groupcollaborationL:before {
+  content: "\e914";
+}
+.icon-people-groupcollaboration:before {
+  content: "\e915";
+}
+.icon-people-handshakeL:before {
+  content: "\e916";
+}
+.icon-people-handshake:before {
+  content: "\e917";
+}
+.icon-people-hearing1:before {
+  content: "\e918";
+}
+.icon-people-hearing2:before {
+  content: "\e919";
+}
+.icon-people-keypadL:before {
+  content: "\e91a";
+}
+.icon-people-keypad:before {
+  content: "\e91b";
+}
+.icon-people-maleandfemaleL:before {
+  content: "\e91c";
+}
+.icon-people-maleandfemale:before {
+  content: "\e91d";
+}
+.icon-people-manualrecording:before {
+  content: "\e91e";
+}
+.icon-people-manualrecordingL:before {
+  content: "\e91f";
+}
+.icon-people-mobility:before {
+  content: "\e920";
+}
+.icon-people-mobilityL:before {
+  content: "\e921";
+}
+.icon-people-motionsensor:before {
+  content: "\e922";
+}
+.icon-people-motionsensorL:before {
+  content: "\e923";
+}
+.icon-people-oneperson:before {
+  content: "\e924";
+}
+.icon-people-onepersonL:before {
+  content: "\e925";
+}
+.icon-people-panicbutton:before {
+  content: "\e926";
+}
+.icon-people-previewL:before {
+  content: "\e927";
+}
+.icon-people-preview:before {
+  content: "\e928";
+}
+.icon-people-searchpeopleL:before {
+  content: "\e929";
+}
+.icon-people-searchpeople:before {
+  content: "\e92a";
+}
+.icon-people-selectL:before {
+  content: "\e92b";
+}
+.icon-people-select:before {
+  content: "\e92c";
+}
+.icon-people-socialnetworkingL:before {
+  content: "\e92d";
+}
+.icon-people-socialnetworking:before {
+  content: "\e92e";
+}
+.icon-people-telepresenceL:before {
+  content: "\e92f";
+}
+.icon-people-telepresence:before {
+  content: "\e930";
+}
+.icon-people-twopeopleL:before {
+  content: "\e931";
+}
+.icon-people-twopeople:before {
+  content: "\e932";
+}
+.icon-people-useraccess:before {
+  content: "\e933";
+}
+.icon-people-userbookmarkL:before {
+  content: "\e934";
+}
+.icon-people-userbookmark:before {
+  content: "\e935";
+}
+.icon-people-usercheckL:before {
+  content: "\e936";
+}
+.icon-people-usercheck:before {
+  content: "\e937";
+}
+.icon-people-userminusL:before {
+  content: "\e938";
+}
+.icon-people-userminus:before {
+  content: "\e939";
+}
+.icon-people-visitingattendeeL:before {
+  content: "\e93a";
+}
+.icon-people-visitingattendee:before {
+  content: "\e93b";
+}
+.icon-people-voicecommandL:before {
+  content: "\e93c";
+}
+.icon-people-voicecommand:before {
+  content: "\e93d";
+}
+.icon-people-voiceordataonlyplansL:before {
+  content: "\e93e";
+}
+.icon-people-voiceordataonlyplans:before {
+  content: "\e93f";
+}
+.icon-people-youcontactL:before {
+  content: "\e940";
+}
+.icon-people-youcontact:before {
+  content: "\e941";
+}

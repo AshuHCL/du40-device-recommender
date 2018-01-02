@@ -1,0 +1,17 @@
+<div class="step-indicator">
+    <h1 class="step-heading">{{cms?.unlockPortalPageHeaderTitle}}</h1>
+    <ul class="steps">
+        <li [ngClass]="{'step-on': stepIndex >= 1 }" >
+            <div class="step-text" [ngClass]="{'step-prev-tab': stepIndex > 1}" data-sm-text="Step 1 of 3:" data-large-text="1." aria-hidden="true">{{customerType ? cms?.DUEnterYourWirelessNumberStep : cms?.DUEnterYourIMEIStep}}</div>
+            <span class="hidden-spoken">Step 1 of 3. {{cms?.DUEnterYourWirelessNumberStep}}. Current step</span>
+        </li>
+        <li [ngClass]="{'step-on': stepIndex >= 2 }">
+            <div class="step-text" [ngClass]="{'step-prev-tab': stepIndex > 2}" data-sm-text="Step 2 of 3:" data-large-text="2." aria-hidden="true">{{customerType ? cms?.DUAccountInformationStep : cms?.DUAContactInformationStep}}</div>
+            <span class="hidden-spoken">Step 2 of 3. {{cms?.DUAccountInformationStep}}. Remaining step</span>
+        </li>
+        <li [ngClass]="{'step-on': stepIndex >= 3 }">
+            <div class="step-text" [ngClass]="{'step-prev-tab': stepIndex > 3}" data-sm-text="Step 3 of 3:" data-large-text="3." aria-hidden="true">{{cms?.DUConfirmationStep}} </div>
+            <span class="hidden-spoken">Step 3 of 3. {{cms?.DUConfirmationStep}}. Remaining step</span>
+        </li>
+    </ul>
+</div>

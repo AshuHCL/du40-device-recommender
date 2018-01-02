@@ -1,0 +1,93 @@
+<div class="container"> 
+<step-indicator class="d-b" [cms]="(cms | async)" [stepIndex]="2" [customerType]="false"></step-indicator> 
+    <div class="row">
+        <div class="span12">
+            <form class="account-form">
+                <fieldset>
+                    <div class="row">
+                        <div class="form-row span5">
+                            <label for="last_name">{{(cms | async)?.imeiContactInfoFirstnameLabel}}</label>
+                            <div class="field-group">
+                                <input class="form-control" id="last_name" class="span12" name="firstName" placeholder="Ex: Smith" tabindex="0" type="text"
+                                    data-validate="address1" maxlength="35" data-required="true" type="text" aria-label="Street address"
+                                    aria-required="true" [(ngModel)]="firstName" (keyup)="validateNext($event)">
+                                <button class="reset-field" type="button" tabindex="-1" aria-label="Reset text field" aria-hidden="true"></button>
+                            </div>
+                            <div *ngIf="firstNameValidErr" aria-live="polite" aria-atomic="true" class="error-msg-color">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.accountHolderFirstnameRequiredError }}
+                            </div>
+                        </div>
+                        <div class="form-row span5 offset1">
+                            <label for="address1">{{(cms | async)?.imeiContactInfoLastnameLabel}}</label>
+                            <div class="field-group">
+                                <input id="address1" name="lastName" class="span12" data-validate="address1" maxlength="35" data-required="true" type="text"
+                                    aria-label="Street address" aria-required="true" placeholder="Ex: Mary" [(ngModel)]="lastName"
+                                    (keyup)="validateNext($event)">
+                                <button class="reset-field" type="button" tabindex="-1" aria-label="Reset text field"></button>
+                            </div>
+                            <div *ngIf="lastNameValidErr" aria-live="polite" class="error-msg-color" id="street_address">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.accountHolderLastnameRequiredError}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-row span5">
+                            <label for="wirelessNumber">{{(cms | async)?.wirelessTelephoneNumberLabel}}</label>
+                            <div class="field-group">
+                                <input class="form-control" id="wirelessNumber" class="span12" name="wirelessNumber" placeholder="Ex: 1234567890" tabindex="0" type="text"
+                                    data-validate="address1"  minlength="10" maxlength="10" data-required="true" type="text" aria-label="Street address"
+                                    aria-required="true" [(ngModel)]="wirelessNumber" (keyup)="validateNext($event)">
+                                <button class="reset-field" type="button" tabindex="-1" aria-label="Reset text field" aria-hidden="true"></button>
+                            </div>
+                            <div *ngIf="wirelessNumberValidErr" aria-live="polite" aria-atomic="true" class="error-msg-color">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.wirelessNumberRequiredError}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-row span5">
+                            <label for="email">{{(cms | async)?.emailLabel}}</label>
+                            <div class="field-group">
+                                <input class="form-control" id="email" class="span12" name="email" placeholder="Ex: name@email.com" tabindex="0" type="email"
+                                    data-validate="address1" maxlength="35" data-required="true"  aria-label="Street address"
+                                    aria-required="true" [(ngModel)]="email" (blur)="validateNext($event)">
+                                <button class="reset-field" type="button" tabindex="-1" aria-label="Reset text field" aria-hidden="true"></button>
+                            </div>
+                            <div *ngIf="emailValidErr" aria-live="polite" aria-atomic="true" class="error-msg-color">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.emailRequiredError}}
+                            </div>
+                            <div *ngIf="invalidEmailFormatErr" aria-live="polite" class="error-msg-color" id="street_address">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.emailValidationError}}
+                            </div>
+                            <p class="required-text"><em>{{(cms | async)?.emailHelpText}}</em></p>
+                        </div>
+                        <div class="form-row span5 offset1">
+                            <label for="email_again">{{(cms | async)?.confirmEmail}}</label>
+                            <div class="field-group">
+                                <input id="email_again" name="confirmEmail" class="span12" data-validate="address1" maxlength="35" data-required="true" type="email"
+                                    aria-label="Street address" aria-required="true" placeholder="Ex: name@email.com" [(ngModel)]="confirmEmail"
+                                    (blur)="validateNext($event)">
+                                <button class="reset-field" type="button" tabindex="-1" aria-label="Reset text field"></button>
+                            </div>
+                            <div *ngIf="confirmEmailValidErr" aria-live="polite" class="error-msg-color" id="street_address">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.emailMismatchError}}
+                            </div>
+                            <div *ngIf="invalidConfirmEmailFormatErr" aria-live="polite" class="error-msg-color" id="street_address">
+                                <i class="icon-badgealert" aria-hidden="true"></i> {{(cms | async)?.emailValidationError}}
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <hr class="lite">
+    <h3 class="heading-small-content-emphasis">{{(cms | async)?.whatnextTitle}}</h3>
+    <p>{{(cms | async)?.whatnextInstructionLine1}}</p>
+    <p [innerHTML]="(cms | async)?.whatnextInstructionLine2"></p>
+    <hr class="lite">
+    <div class="cta-button-group nodots align-right">
+        <button [disabled]="isInvalid" id="nonattSubmit" class="btn btn-primary-functional" type="button" (click)="unlockNext()">{{(cms | async)?.submitButton}}</button>
+        <button class="btn btn-secondary" type="button" (click)="unlockPrevious()">{{(cms | async)?.backButton}}</button>
+    </div>
+</div>

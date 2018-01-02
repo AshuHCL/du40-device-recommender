@@ -1,0 +1,24 @@
+@import '../../app.component.scss';
+.radio-ibl {
+    .form-row {
+        display: inline-block;
+        &+.form-row {
+            margin-left: 15px;
+        }
+    }
+}
+
+.account-form .form-row {
+    margin-bottom: 15px;
+}
+
+@media (min-width:768px) {
+    /* Tab and Desktop */
+    .cta-button-group .btn {
+        width: 150px;
+    }
+}
+
+.error-msg-color {
+    color: red;
+}

@@ -1,0 +1,153 @@
+/*! Global styles - v1.6.2 - Last updated: 2017-02-06. Copyright (c) 2017 AT&T Services, Inc.*/
+/*! BEGIN TABS-PILLS.LESS ***************** */
+.tabs {
+  margin-left: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+.tabs > li > a {
+  display: block;
+}
+.tabs > li > a:hover,
+.tabs > li > a:focus {
+  text-decoration: none;
+  background-color: #d2d2d2;
+}
+.tabs > .pull-right {
+  float: right;
+}
+.tabs:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.tabs > li {
+  float: left;
+}
+.tabs > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: 3px;
+  line-height: 16px;
+}
+.tabs {
+  margin: 0;
+}
+.tabs > li {
+  margin-bottom: -1px;
+}
+.tabs > li:first-child {
+  margin-left: 20px;
+}
+.tabs > li > a {
+  padding: 12px 20px;
+  border: 1px solid #d2d2d2;
+  border-radius: 6px 6px 0 0;
+  background-color: #f2f2f2;
+  color: #5a5a5a;
+  border-color: #d2d2d2;
+}
+.tabs > li > a {
+  margin-right: 6px;
+}
+.tabs > li > a,
+.tabs > li > a:hover,
+.tabs > li > a:focus {
+  background-image: none;
+  background-color: #ffffff;
+  color: #5a5a5a;
+  border-color: #d2d2d2;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+.tabs.tabs-justified,
+.tabs.promo-tabs {
+  width: 100%;
+  border-bottom: 0;
+  margin-bottom: -1px;
+}
+.tabs.tabs-justified > li,
+.tabs.promo-tabs > li {
+  display: table-cell;
+  float: none;
+  width: 1%;
+  border-left: 1px solid #d2d2d2;
+}
+.tabs.tabs-justified > li.active,
+.tabs.promo-tabs > li.active {
+  position: relative;
+  z-index: 1000;
+}
+.tabs.tabs-justified > li > a {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.tabs.tabs-justified > li > a,
+.tabs.promo-tabs > li > a {
+  text-align: center;
+}
+.tabs.promo-tabs > li > a {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  color: #0568ae;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 6px 10px 10px;
+  border-top: 4px solid #e6e6e6;
+  -webkit-filter: none;
+          filter: none;
+  border-bottom: 1px solid #d2d2d2;
+  background-color: #f9f9f9;
+}
+.tabs > li:last-child > a {
+  margin-right: 0;
+}
+.tabs.promo-tabs > li.active > a {
+  color: #333333;
+  border-top: 4px solid #ea7400;
+  border-bottom-color: white;
+  background-color: #fff !important;
+  -webkit-filter: none;
+          filter: none;
+  cursor: default;
+}
+.tabs.promo-tabs > li:first-child {
+  border-left: none;
+}
+.tabs.promo-tabs > li > a img {
+  max-width: inherit;
+  max-height: 39px;
+  margin: 0 auto 5px auto;
+  display: block;
+}
+.tabbable:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.tab-content {
+  overflow: auto;
+  border: 1px solid #e6e6e6;
+}
+.tabs.promo-tabs + .tab-content {
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+.tab-content > .tab-pane {
+  padding: 10px 15px;
+}
+.tab-content.noborder {
+  border: none;
+}
+.tab-content.noborder > .tab-pane {
+  padding: 0;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
+}
+/* END TABS-PILLS.LESS ********************** */
