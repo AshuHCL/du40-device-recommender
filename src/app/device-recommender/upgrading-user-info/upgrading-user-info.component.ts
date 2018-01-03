@@ -21,7 +21,8 @@ export class UpgradingUserInfoComponent implements OnInit {
 
     public ngOnInit() {
 
-  	    this.deviceRecommenderService.getUpgradingDeviceDetailsData().subscribe( (data: => any) {
+  	    this.deviceRecommenderService.getUpgradingDeviceDetailsData().subscribe( 
+            (data: any) => {
     	    	this.upgradingDeviceDetails = data.payload;
     	    	this.upgradingDeviceDetails.subscriberName = this.upgradingDeviceDetails.subscriberName || '';
                 this.upgradingDeviceDetails.deviceMake = this.upgradingDeviceDetails.deviceMake || '';
