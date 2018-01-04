@@ -89,7 +89,7 @@ export class DeviceTilesComponent implements OnInit {
 				      	console.log('Something went wrong!');
 				      	this.deviceRecommenderService.getRecommendationsFromCatalog().subscribe( 
             				(recommendedDevicesFromCatalog: any) => {
-		                    	this.getDevicePriceDetails(recommendedDevicesFromCatalog);
+		                    	this.getDevicePriceDetails(recommendedDevicesFromCatalog.payload);
             				}
             			);
 				    }

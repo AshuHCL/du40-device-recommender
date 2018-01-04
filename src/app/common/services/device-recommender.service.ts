@@ -7,9 +7,9 @@ export class DeviceRecommenderService {
 	public baseUrl: string = 'https://www.att.com/';
   	private upgradingUserApiUrl: string = '../assets/content/upgrading-user-info.json';
   	private catalogRexResponse: string = '../assets/content/recommended-devices.json';
-  	private deviceRecommenderApi: string = 'https://www.att.com/rex/recommendation/rexBySku/';
+  	private deviceRecommenderApi: string = '../assets/content/rexResponse.json';
   	private deviceImageUrlRoot = 'https://www.att.com/catalog/en/xpress/'
-  	private catalogApi = 'https://www.att.com/services/shopwireless/model/att/ecom/api/CatalogServiceController/catalogService';
+  	private devicePriceApiResponse = '../assets/content/devicePriceApiResponse.json';
   	
   	constructor(private http: HttpClient) { }
   	
@@ -36,8 +36,9 @@ export class DeviceRecommenderService {
         var rex = this.deviceRecommenderApi,
             params = this.createParams(upgradingDeviceDetails);
 
-        rex = rex + upgradingDeviceDetails.deviceSkuId;
-        return this.http.get(rex, params);
+        // rex = rex + upgradingDeviceDetails.deviceSkuId;
+        // return this.http.get(rex, params);
+        return this.http.get(rex);
     };
 
     public getRecommendationsFromCatalog = function () {
@@ -45,7 +46,7 @@ export class DeviceRecommenderService {
     };
 
     public getItemPriceData = function(skuId) {
-    	return this.http.get(this.catalogApi, {
+    	return this.http.get(this.devicePriceApiResponse, {
             params: {
                 actionType: 'getskuprices',
                 skuId: skuId
