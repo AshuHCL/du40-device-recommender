@@ -18,10 +18,16 @@ export class DeviceTilesComponent implements OnInit {
 	public rexTrueRecommendations = 0;
 	public initDevicesLoaded = 6;
 
+	public numberr = function(number) {
+		console.log(number);
+		return number;
+	};
+
 	private getDevicePriceDetails = function (rexDevices) {
 
         var x, skuids;
 		this.totalDeviceRecommendations = rexDevices;
+		this.ref.detectChanges();
 
 		//gets the initial recommended devices to be displayed from recommender API
         for (x in this.totalDeviceRecommendations) {
@@ -46,6 +52,7 @@ export class DeviceTilesComponent implements OnInit {
         this.deviceRecommenderService.getItemPriceData(skuids).subscribe((result:any) => {
             var commitmentTerms = {};
             this.itemPrice = result.payload;
+            this.ref.detectChanges();
 
             for (let key in this.itemPrice) {
             	var commitmentTerm = {name:"",leaseTotalMonths:"",deviceType:""};
@@ -57,6 +64,8 @@ export class DeviceTilesComponent implements OnInit {
                         this.itemPrice[key].brand, null, this.itemPrice[key].shortDisplayName, this.itemPrice[key].color, '-hero.png');
             };
             this.commitmentTerms = commitmentTerms;
+            this.ref.detectChanges();
+
             // this.fetchShortLegalContentForDevices(this.commitmentTerms); TODO
         });
 	};
