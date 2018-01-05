@@ -9,7 +9,17 @@ export class DeviceRecommenderService {
   	private catalogRexResponse: string = '../assets/content/recommended-devices.json';
   	private deviceRecommenderApi: string = '../assets/content/rexResponse.json';
   	private deviceImageUrlRoot = 'https://www.att.com/catalog/en/xpress/'
-  	private devicePriceApiResponse = '../assets/content/devicePriceApiResponse.json';
+    private devicePriceApiResponse = '../assets/content/devicePriceApiResponse.json';
+    private colorMatrix = [
+        '#000000',
+        '#5C5A5A',
+        '#C14242',
+        '#D2CCB5',
+        '#8482A3',
+        '#6E91AF',
+        '#354D28',
+        '#F1E0CC'
+    ];
   	
   	constructor(private http: HttpClient) { }
   	
@@ -65,6 +75,15 @@ export class DeviceRecommenderService {
             + nameClean + '/'
             + colorClean + extension;
     };
+
+    public getColorTheme = function (hexValue) {
+        hexValue = hexValue.toUpperCase();
+        if (this.colorMatrix.indexOf(hexValue) !== -1) {
+            return 'dark';
+        } else {
+            return 'light';
+        }
+    }
 
     private getCleanString = function(dirty) {
         var anythingThatDoesntMatch = /[^0-9a-zA-Z&+_ -]/g;
