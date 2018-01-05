@@ -10,6 +10,7 @@ export class DeviceBrandFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // TODO
   }
 
 }
