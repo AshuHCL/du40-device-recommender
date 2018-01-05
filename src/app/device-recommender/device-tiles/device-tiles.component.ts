@@ -17,6 +17,7 @@ export class DeviceTilesComponent implements OnInit {
 	public totalDevicesLoaded;
 	public rexTrueRecommendations = 0;
 	public initDevicesLoaded = 6;
+	public heroDeviceTileColorTheme;
 
 	public numberr = function(number) {
 		console.log(number);
@@ -27,6 +28,7 @@ export class DeviceTilesComponent implements OnInit {
 
         var x, skuids;
 		this.totalDeviceRecommendations = rexDevices;
+		this.heroDeviceTileColorTheme = this.deviceRecommenderService.getColorTheme(rexDevices[0].htmlColor);
 		this.ref.detectChanges();
 
 		//gets the initial recommended devices to be displayed from recommender API
