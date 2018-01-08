@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class DeviceRecommenderService {
@@ -20,12 +21,17 @@ export class DeviceRecommenderService {
         '#354D28',
         '#F1E0CC'
     ];
+    private rexDevices = new Subject<any>();
   	
-  	constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
+
+    public getRexObservableData = function() {
+        return this.rexDevices;
+    };
   	
   	public getUpgradingDeviceDetailsData() {
     	return this.http.get(this.upgradingUserApiUrl, {});
-	}
+	};
 
     public getDeviceType = function (deviceType) {
         var upDeviceType;
@@ -45,14 +51,15 @@ export class DeviceRecommenderService {
     public getRecommendedDevices = function (upgradingDeviceDetails) {
         var rex = this.deviceRecommenderApi,
             params = this.createParams(upgradingDeviceDetails);
-
-        // rex = rex + upgradingDeviceDetails.deviceSkuId;
-        // return this.http.get(rex, params);
-        return this.http.get(rex);
+        var a = this.http.get(rex);
+        this.rexDevices.next(a);
+        return a;
     };
 
     public getRecommendationsFromCatalog = function () {
-    	return this.http.get(this.catalogRexResponse, {});
+        var a = this.http.get(this.catalogRexResponse, {});
+        this.rexDevices.next(a);
+    	return a;
     };
 
     public getItemPriceData = function(skuId) {
