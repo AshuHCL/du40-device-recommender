@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-
+import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class DeviceRecommenderService {
 	public baseUrl: string = 'https://www.att.com/';
@@ -10,7 +10,19 @@ export class DeviceRecommenderService {
   	private deviceRecommenderApi: string = '../assets/content/rexResponse.json';
   	private deviceImageUrlRoot = 'https://www.att.com/catalog/en/xpress/'
   	private devicePriceApiResponse = '../assets/content/devicePriceApiResponse.json';
-  	
+  	private subject = new Subject<any>();
+ 
+    sendMessage(message: string) {
+        this.subject.next({ text: message });
+    }
+ 
+    clearMessage() {
+        this.subject.next();
+    }
+ 
+    getMessage(): Observable<any> {
+        return this.subject.asObservable();
+    }
   	constructor(private http: HttpClient) { }
   	
   	public getUpgradingDeviceDetailsData() {
@@ -98,3 +110,4 @@ export class DeviceRecommenderService {
         return params;
     };
 }
+

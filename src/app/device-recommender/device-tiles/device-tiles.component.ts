@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { DeviceRecommenderService } from '../../common/services/device-recommender.service';
-
+import { Subscription } from 'rxjs/Subscription';
 @Component({
     selector: 'device-tiles',
     templateUrl: `device-tiles.component.html`,
@@ -9,7 +9,8 @@ import { DeviceRecommenderService } from '../../common/services/device-recommend
   	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeviceTilesComponent implements OnInit {
-	
+
+
 	public itemPrice;
 	public commitmentTerms = [];
 	public imgUrl = [];
@@ -22,7 +23,8 @@ export class DeviceTilesComponent implements OnInit {
 		console.log(number);
 		return number;
 	};
-
+	message: any;
+    subscription: Subscription;
 	private getDevicePriceDetails = function (rexDevices) {
 
         var x, skuids;
@@ -76,8 +78,13 @@ export class DeviceTilesComponent implements OnInit {
 
     constructor(
     	private deviceRecommenderService: DeviceRecommenderService,
-        private ref: ChangeDetectorRef 
-    ) { }
+        private ref: ChangeDetectorRef,
+		
+		)
+		 {
+				this.subscription = this.deviceRecommenderService.getMessage().subscribe(message => { this.message = message; });
+
+	 }
 
     ngOnInit() {
   	  	this.deviceRecommenderService.getUpgradingDeviceDetailsData().subscribe( 
@@ -105,6 +112,11 @@ export class DeviceTilesComponent implements OnInit {
 		        );
     		}
     	);
+    }
+
+	 ngOnDestroy() {
+        // unsubscribe to ensure no memory leaks
+        this.subscription.unsubscribe();
     }
 
 }
