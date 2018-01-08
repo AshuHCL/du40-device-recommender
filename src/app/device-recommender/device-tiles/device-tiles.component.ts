@@ -14,14 +14,18 @@ export class DeviceTilesComponent implements OnInit {
 	public commitmentTerms = [];
 	public imgUrl = [];
 	public totalDeviceRecommendations;
-	public totalDevicesLoaded;
-	public rexTrueRecommendations = 0;
 	public initDevicesLoaded = 6;
 	public heroDeviceTileColorTheme;
+	public devicesToBeDisplayed;
+	public limitDevices = this.initDevicesLoaded;
 
-	public numberr = function(number) {
-		console.log(number);
-		return number;
+	public viewMoreDevices = function(initDevicesLoaded) {
+		console.log(initDevicesLoaded);
+		console.log(this.devicesToBeDisplayed);
+		this.limitDevices = this.initDevicesLoaded + initDevicesLoaded;
+		var temp1 =  this.totalDeviceRecommendations.slice(initDevicesLoaded, this.limitDevices);
+		this.devicesToBeDisplayed = this.devicesToBeDisplayed.concat(temp1);
+		this.ref.detectChanges();
 	};
 
 	private getDevicePriceDetails = function (rexDevices) {
@@ -30,22 +34,6 @@ export class DeviceTilesComponent implements OnInit {
 		this.totalDeviceRecommendations = rexDevices;
 		this.heroDeviceTileColorTheme = this.deviceRecommenderService.getColorTheme(rexDevices[0].htmlColor);
 		this.ref.detectChanges();
-
-		//gets the initial recommended devices to be displayed from recommender API
-        for (x in this.totalDeviceRecommendations) {
-            if (this.totalDeviceRecommendations[x].source === 'rex') {
-                this.rexTrueRecommendations += 1;
-            }
-        }
-        if (this.rexTrueRecommendations < this.initDevicesLoaded / 2 || this.rexTrueRecommendations >= this.initDevicesLoaded) {
-            if (this.totalDevicesLoaded > this.totalDeviceRecommendations.length) {
-                this.totalDevicesLoaded = this.totalDeviceRecommendations.length;
-            }
-            // $scope.viewMoreDevices($scope.initDevicesLoaded);
-        } else {
-            this.totalDevicesLoaded = this.rexTrueRecommendations;
-            // $scope.viewMoreDevices(rexTrueRecommendations);
-        }
 
         skuids = this.totalDeviceRecommendations.map(function (item) {
             return item.skuId;
@@ -89,18 +77,21 @@ export class DeviceTilesComponent implements OnInit {
                     	if(recommendedDevices == undefined || !recommendedDevices) {
                     		this.deviceRecommenderService.getRecommendationsFromCatalog().subscribe( 
                     			(recommendedDevicesFromCatalog: any) => {
+									this.devicesToBeDisplayed = recommendedDevicesFromCatalog.slice(0,this.initDevicesLoaded);
 		                    		this.getDevicePriceDetails(recommendedDevicesFromCatalog);
                     			}
                     		);
                     	} else {
-	                    	this.getDevicePriceDetails(recommendedDevices);
-                    	}
+							this.devicesToBeDisplayed = recommendedDevices.slice(0,this.initDevicesLoaded);
+							this.getDevicePriceDetails(recommendedDevices);
+						}
 		            },
 				    err => {
 				      	console.log('Something went wrong!');
 				      	this.deviceRecommenderService.getRecommendationsFromCatalog().subscribe( 
             				(recommendedDevicesFromCatalog: any) => {
-		                    	this.getDevicePriceDetails(recommendedDevicesFromCatalog.payload);
+								this.devicesToBeDisplayed = recommendedDevicesFromCatalog.slice(0,this.initDevicesLoaded);
+								this.getDevicePriceDetails(recommendedDevicesFromCatalog.payload);
             				}
             			);
 				    }

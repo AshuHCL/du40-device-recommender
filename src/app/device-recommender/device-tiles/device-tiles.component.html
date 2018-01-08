@@ -1,6 +1,6 @@
-<div class="container device-container" *ngFor="let items of totalDeviceRecommendations | limitTo: initDevicesLoaded; let num = index; even as isEven" >
+<div class="container device-container" *ngFor="let items of devicesToBeDisplayed | limitTo: limitDevices; let num = index; even as isEven" >
     <div class="row recommended-device-row" *ngIf="isEven">
-        <div class="recommended-device span6 mH300" *ngFor="let item of [totalDeviceRecommendations[num],totalDeviceRecommendations[num+1]]; let num2 = index">
+        <div class="recommended-device span6 mH300" *ngFor="let item of [devicesToBeDisplayed[num],devicesToBeDisplayed[num+1]]; let num2 = index">
             <div class="row span12 device-grid"
             [ngClass]="{'light-theme': num2==0 && num==0 && heroDeviceTileColorTheme=='light',
             'dark-theme': num2==0 && num==0 && heroDeviceTileColorTheme=='dark'}">
@@ -64,5 +64,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="devicesToBeDisplayed.length !== totalDeviceRecommendations.length">
+    <div class="row mB50 mT30 text-center">
+        <button class="btn btn-primary-functional align-middle" (click)="viewMoreDevices(limitDevices)">Show more</button>
     </div>
 </div>
