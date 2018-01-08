@@ -13,18 +13,16 @@ export class DeviceTilesComponent implements OnInit {
 	public itemPrice;
 	public commitmentTerms = [];
 	public imgUrl = [];
-	public totalDeviceRecommendations;
+	public totalDeviceRecommendations = [];
 	public initDevicesLoaded = 6;
 	public heroDeviceTileColorTheme;
-	public devicesToBeDisplayed;
+	public devicesToBeDisplayed = [];
 	public limitDevices = this.initDevicesLoaded;
 
 	public viewMoreDevices = function(initDevicesLoaded) {
-		console.log(initDevicesLoaded);
-		console.log(this.devicesToBeDisplayed);
 		this.limitDevices = this.initDevicesLoaded + initDevicesLoaded;
-		var temp1 =  this.totalDeviceRecommendations.slice(initDevicesLoaded, this.limitDevices);
-		this.devicesToBeDisplayed = this.devicesToBeDisplayed.concat(temp1);
+		var tempArr =  this.totalDeviceRecommendations.slice(initDevicesLoaded, this.limitDevices);
+		this.devicesToBeDisplayed = this.devicesToBeDisplayed.concat(tempArr);
 		this.ref.detectChanges();
 	};
 
