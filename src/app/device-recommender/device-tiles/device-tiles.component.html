@@ -1,3 +1,5 @@
+ <div  class="alert alert-success">{{message.text}}</div>
+
 <div class="container device-container" *ngFor="let items of totalDeviceRecommendations | limitTo: initDevicesLoaded; let num = index; even as isEven" >
     <div class="row recommended-device-row" *ngIf="isEven">
         <div class="recommended-device span6 mH300" *ngFor="let item of [totalDeviceRecommendations[num],totalDeviceRecommendations[num+1]]">
@@ -31,4 +33,4 @@
         </div>
     </div>
 </div>
-            <div *ngIf="message" class="alert alert-success">{{message.text}}</div>
+           

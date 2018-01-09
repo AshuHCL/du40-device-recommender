@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class DeviceTilesComponent implements OnInit {
 
-
+	text:any;
 	public itemPrice;
 	public commitmentTerms = [];
 	public imgUrl = [];
@@ -29,6 +29,7 @@ export class DeviceTilesComponent implements OnInit {
 
         var x, skuids;
 		this.totalDeviceRecommendations = rexDevices;
+		console.log("this.totalDeviceRecommendations"+this.totalDeviceRecommendations);
 		this.ref.detectChanges();
 
 		//gets the initial recommended devices to be displayed from recommender API

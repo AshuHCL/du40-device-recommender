@@ -1,5 +1,7 @@
 <div class="container device-filter-container">
-
+<h1>Home</h1>
+    <button (click)="sendMessage()">Send Message</button>
+    <button (click)="clearMessage()">Clear Message</button>
     <div class="device-filter" [ngClass]="{'drawer-open': isClassVisible }" ng-class="drawer-open">
 
         <div class="device-filter-header" (click)="isClassVisible = !isClassVisible;"><button class="device-filter-label">Filter by brand<span *ngIf="hideElem">
@@ -17,10 +19,9 @@ aria-label="show brands"></i></button>
 
             <label class="checkbox device-filter-option" *ngFor="let item of brandArray; let i=index">
                <span class="device-filter-option-text" >{{item}}</span>
-                    <input type="checkbox" > <i class="skin"></i>
-                    </label>
+                    <input type="checkbox" (change)="typefilter($event,item)"  name="type" > <i class="skin"></i>
+                   </label>
+                    
 
         </div>
-        <h1>Home</h1>
-    <button (click)="sendMessage()">Send Message</button>
-    <button (click)="clearMessage()">Clear Message</button>
+        

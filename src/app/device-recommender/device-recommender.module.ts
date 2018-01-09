@@ -1,6 +1,8 @@
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {  TruncatePipe }   from './device-recommender.component';
 import { DeviceRecommenderComponent } from './device-recommender.component';
 import { UpgradingUserInfoComponent } from './upgrading-user-info/upgrading-user-info.component';
@@ -16,7 +18,7 @@ import { DeviceRecommenderService } from '../common/services/device-recommender.
     DeviceBrandFilterComponent,
     TruncatePipe
   ],
-  imports: [CommonModule,
+  imports: [CommonModule,FormsModule,
     RouterModule.forChild([
       { path: '', component: DeviceRecommenderComponent, pathMatch: 'full' }
     ])

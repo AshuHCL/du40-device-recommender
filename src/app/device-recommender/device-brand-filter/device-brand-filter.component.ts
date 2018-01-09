@@ -20,8 +20,10 @@ import { FormsModule } from '@angular/forms';
 export class
 DeviceBrandFilterComponent
 implements OnInit {
-     
+  value: any;
 
+    type: any = [];
+    index: any ;
     uniqueArray: string;
 
     resultArray: any;
@@ -50,7 +52,7 @@ implements OnInit {
         this.totalDeviceRecommendations =rexDevices;
        
         for (let key in rexDevices) {
-            var a = this.totalDeviceRecommendations[key].brand;
+           // var a = this.totalDeviceRecommendations[key].brand;
             if(this.brandArray.indexOf(this.totalDeviceRecommendations[key].brand) == -1) {
               this.brandArray.push(this.totalDeviceRecommendations[key].brand);
             
@@ -68,12 +70,20 @@ implements OnInit {
         console.log("uniqueArray" + this.uniqueArray);
     }
 
-    checked() {
-      return this.brandArray.filter(item => { return item.checked; });
-    }
+   typefilter(event,checkedData){
+  if(event.target.checked){
+    //this.type = checkedData;
+    let x=this.type.checked;
+    this.type.push(checkedData);
+    console.log(this.type);
+    //this.activityService.getActivities().then(activities => this.activities = activities.filter(a => a.type == this.type));      
+  }
+  else if(this.index = this.type.indexOf(this.value) !== -1) {
+    alert("remove");
+                    this.type.splice(this.index, 1);
+                }
+}
     ngOnInit() {
-
-        console.log("uniqueArray" + this.uniqueArray);
 
         this.deviceRecommenderService.getRecommendationsFromCatalog().subscribe(
 
@@ -81,8 +91,6 @@ implements OnInit {
                 any) => {
 
                 this.data = recommendedDevicesFromCatalog.payload;
-
-                //this.resultArray = this.data.map(function(a) {return a["brand"];});
 
                 this.getDevicePriceDetails(this.data);
 
