@@ -20,9 +20,11 @@ import { FormsModule } from '@angular/forms';
 export class
 DeviceBrandFilterComponent
 implements OnInit {
+  args: any;
+  x: any;
   value: any;
 
-    type: any = [];
+    type = [];
     index: any ;
     uniqueArray: string;
 
@@ -36,9 +38,10 @@ implements OnInit {
     brandArray:any=[];
     public totalDeviceRecommendations;
 
- sendMessage(): void {
+ sendMessage(){
+   alert();
         // send message to subscribers via observable subject
-        this.deviceRecommenderService.sendMessage('Message from Home Component to App Component!');
+        this.deviceRecommenderService.sendMessage(args);
     }
  
     clearMessage(): void {
@@ -47,10 +50,8 @@ implements OnInit {
     }
 
     public  getDevicePriceDetails = function(rexDevices) {
-
-        console.log("getDevicePriceDetails funxn is gretting called. ");
-        this.totalDeviceRecommendations =rexDevices;
-       
+       this.totalDeviceRecommendations =rexDevices;
+      
         for (let key in rexDevices) {
            // var a = this.totalDeviceRecommendations[key].brand;
             if(this.brandArray.indexOf(this.totalDeviceRecommendations[key].brand) == -1) {
@@ -67,22 +68,27 @@ implements OnInit {
     constructor(private deviceRecommenderService:
         DeviceRecommenderService, private ref: ChangeDetectorRef) {
         this.hideElem =false;
-        console.log("uniqueArray" + this.uniqueArray);
+       
     }
 
-   typefilter(event,checkedData){
-  if(event.target.checked){
-    //this.type = checkedData;
-    let x=this.type.checked;
-    this.type.push(checkedData);
-    console.log(this.type);
-    //this.activityService.getActivities().then(activities => this.activities = activities.filter(a => a.type == this.type));      
-  }
-  else if(this.index = this.type.indexOf(this.value) !== -1) {
-    alert("remove");
-                    this.type.splice(this.index, 1);
-                }
-}
+   brandfilter(event,filterData){
+            if(event.target.checked){
+            
+                  //let x=this.type.checked;
+                  this.type.push(filterData);
+                  console.log("check part"+this.type);  
+                  this.deviceRecommenderService.sendMessage(this.type);
+   
+              }
+                            else
+                              {      
+                                 var index = this.type.indexOf(filterData);
+                                 this.type.splice(index, 1);
+                                 this.deviceRecommenderService.sendMessage(this.type);
+                                  console.log(this.type);  
+                               }
+    }
+   
     ngOnInit() {
 
         this.deviceRecommenderService.getRecommendationsFromCatalog().subscribe(

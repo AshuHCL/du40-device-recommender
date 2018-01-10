@@ -29,7 +29,7 @@ export class DeviceTilesComponent implements OnInit {
 
         var x, skuids;
 		this.totalDeviceRecommendations = rexDevices;
-		console.log("this.totalDeviceRecommendations"+this.totalDeviceRecommendations);
+		console.log("this.totalDeviceRecommendations"+JSON.parse(rexDevices));
 		this.ref.detectChanges();
 
 		//gets the initial recommended devices to be displayed from recommender API
@@ -83,7 +83,9 @@ export class DeviceTilesComponent implements OnInit {
 		
 		)
 		 {
-				this.subscription = this.deviceRecommenderService.getMessage().subscribe(message => { this.message = message; });
+				this.subscription = this.deviceRecommenderService.getMessage().subscribe(message => { this.message = message;
+					console.log(this.message );
+			 });
 
 	 }
 

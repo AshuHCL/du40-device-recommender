@@ -12,8 +12,8 @@ export class DeviceRecommenderService {
   	private devicePriceApiResponse = '../assets/content/devicePriceApiResponse.json';
   	private subject = new Subject<any>();
  
-    sendMessage(message: string) {
-        this.subject.next({ text: message });
+    sendMessage(brands) {
+        this.subject.next(brands);
     }
  
     clearMessage() {

@@ -2,8 +2,8 @@
 
 <div class="container device-container" *ngFor="let items of totalDeviceRecommendations | limitTo: initDevicesLoaded; let num = index; even as isEven" >
     <div class="row recommended-device-row" *ngIf="isEven">
-        <div class="recommended-device span6 mH300" *ngFor="let item of [totalDeviceRecommendations[num],totalDeviceRecommendations[num+1]]">
-            <div class="row span12 device-grid light-theme">
+        <div class="recommended-device span6 mH300" *ngFor="let item of [totalDeviceRecommendations[num],totalDeviceRecommendations[num+1]] " >
+            <div class="row span12 device-grid light-theme" *ngIf="['Samsung', 'LG'].includes(item.brand)">
                 <div class="span5 device-desc-grid mL20 no-pad">
                     <div class="span12 block">
                         <h4 class="device-make">{{item.brand}}</h4>

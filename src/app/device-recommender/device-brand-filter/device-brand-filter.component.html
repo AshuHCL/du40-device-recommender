@@ -19,7 +19,7 @@ aria-label="show brands"></i></button>
 
             <label class="checkbox device-filter-option" *ngFor="let item of brandArray; let i=index">
                <span class="device-filter-option-text" >{{item}}</span>
-                    <input type="checkbox" (change)="typefilter($event,item)"  name="type" > <i class="skin"></i>
+                    <input type="checkbox" (change)="brandfilter($event,item)"  name="type" > <i class="skin"></i>
                    </label>
                     
 
