@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy, Pipe, Injectable, PipeTransform } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { DeviceRecommenderService } from '../../common/services/device-recommender.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -8,8 +8,22 @@ import { Subscription } from 'rxjs/Subscription';
     styleUrls: [`device-tiles.component.less`],
   	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DeviceTilesComponent implements OnInit {
 
+@Pipe({
+ name: 'searchfilter'
+})
+
+@Injectable()
+export class SearchFilterPipe implements PipeTransform {
+ transform(items: any[], brand: string, value: string): any[] {
+	 alert(2);
+   if (!items) return [];
+   return items.filter(it => it[brand] == value);
+ }
+}
+
+export class DeviceTilesComponent implements OnInit {
+	message: any;
 	text:any;
 	public itemPrice;
 	public commitmentTerms = [];
@@ -18,18 +32,18 @@ export class DeviceTilesComponent implements OnInit {
 	public totalDevicesLoaded;
 	public rexTrueRecommendations = 0;
 	public initDevicesLoaded = 6;
-
+	brandFilterItems=this.message;
 	public numberr = function(number) {
 		console.log(number);
 		return number;
 	};
-	message: any;
+	
     subscription: Subscription;
 	private getDevicePriceDetails = function (rexDevices) {
 
         var x, skuids;
 		this.totalDeviceRecommendations = rexDevices;
-		console.log("this.totalDeviceRecommendations"+JSON.parse(rexDevices));
+		console.log("this.totalDeviceRecommendations"+rexDevices);
 		this.ref.detectChanges();
 
 		//gets the initial recommended devices to be displayed from recommender API

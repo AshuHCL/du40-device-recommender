@@ -41,7 +41,7 @@ implements OnInit {
  sendMessage(){
    alert();
         // send message to subscribers via observable subject
-        this.deviceRecommenderService.sendMessage(args);
+           this.deviceRecommenderService.sendMessage(this.args);
     }
  
     clearMessage(): void {
