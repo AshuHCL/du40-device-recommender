@@ -1,9 +1,9 @@
-<div class="container device-container" *ngFor="let items of devicesToBeDisplayed | limitTo: limitDevices; let num = index; even as isEven" >
+<div class="container device-container" *ngFor="let items of devicesToBeDisplayed | limitTo: limitDevices; let num = index; let isEven = even" >
     <div class="row recommended-device-row" *ngIf="isEven">
         <div class="recommended-device span6 mH300" *ngFor="let item of [devicesToBeDisplayed[num],devicesToBeDisplayed[num+1]]; let num2 = index">
             <div class="row span12 device-grid"
             [ngClass]="{'light-theme': num2==0 && num==0 && heroDeviceTileColorTheme=='light',
-            'dark-theme': num2==0 && num==0 && heroDeviceTileColorTheme=='dark'}">
+            'dark-theme': num2==0 && num==0 && heroDeviceTileColorTheme=='dark'}" *ngIf="item">
                 <div class="span5 device-desc-grid mL20 no-pad"
                 *ngIf="item.skuId === totalDeviceRecommendations[0].skuId && item.source === 'rex'">
                     <div class="span12 block">
