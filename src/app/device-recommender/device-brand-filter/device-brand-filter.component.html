@@ -8,7 +8,7 @@
         <div class="device-filter-body">
             <label class="checkbox device-filter-option" *ngFor="let item of uniqueBrands">
                 <span class="device-filter-option-text" >{{item}}</span>
-                <input  type="checkbox">
+                <input  type="checkbox" (click)="getSelectedBrand(item, $event)">
                 <i class="skin"></i>
             </label>
         </div> 
