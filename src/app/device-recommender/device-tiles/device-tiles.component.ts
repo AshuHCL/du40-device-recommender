@@ -18,6 +18,7 @@ export class DeviceTilesComponent implements OnInit {
 	public heroDeviceTileColorTheme;
 	public devicesToBeDisplayed = [];
 	public limitDevices = this.initDevicesLoaded;
+	public selectedDevicesToFilter = [];
 
 	public viewMoreDevices = function(initDevicesLoaded) {
 		this.limitDevices = this.initDevicesLoaded + initDevicesLoaded;
@@ -53,19 +54,31 @@ export class DeviceTilesComponent implements OnInit {
             };
             this.commitmentTerms = commitmentTerms;
             this.ref.detectChanges();
-
-            // this.fetchShortLegalContentForDevices(this.commitmentTerms); TODO
         });
-	};
-
-	private fetchShortLegalContentForDevices = function(commitmentTerms) {
-		// TODO
 	};
 
     constructor(
     	private deviceRecommenderService: DeviceRecommenderService,
         private ref: ChangeDetectorRef 
-    ) { }
+    ) {
+		this.deviceRecommenderService.getSelectedBrandsToFilter().subscribe(
+			selectedDevices => {
+				var abc;
+				  this.selectedDevicesToFilter = selectedDevices;
+				if(this.selectedDevicesToFilter.length > 0) {
+					abc = this.totalDeviceRecommendations.filter(devices=> {
+						if (this.selectedDevicesToFilter.indexOf(devices.brand) !== -1) {
+							return devices;
+						}
+					});
+				} else {
+					abc = this.totalDeviceRecommendations.slice(0, this.limitDevices);
+				}
+				this.devicesToBeDisplayed = abc;
+				this.ref.detectChanges();					
+			}
+		);
+	}
 
     ngOnInit() {
   	  	this.deviceRecommenderService.getUpgradingDeviceDetailsData().subscribe( 
@@ -95,7 +108,7 @@ export class DeviceTilesComponent implements OnInit {
 				    }
 		        );
     		}
-    	);
+		);
     }
 
 }

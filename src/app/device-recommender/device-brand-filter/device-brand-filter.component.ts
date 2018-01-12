@@ -9,6 +9,23 @@ import { DeviceRecommenderService } from '../../common/services/device-recommend
 export class DeviceBrandFilterComponent implements OnInit {
   private rexData;
   public uniqueBrands = [];
+  private selectedBrands = [];
+
+  public getSelectedBrand = function(selectedBrand, event) {
+    if(event.target.checked) {
+      if(this.selectedBrands.indexOf(selectedBrand) == -1) {
+        this.selectedBrands.push(selectedBrand);
+        this.deviceRecommenderService.emitSelectedBrands(this.selectedBrands);
+      }
+    }
+    else {
+      if(this.selectedBrands.indexOf(selectedBrand) !== -1) {
+        var brandIndex = this.selectedBrands.indexOf(selectedBrand);
+        this.selectedBrands.splice(brandIndex, 1);
+        this.deviceRecommenderService.emitSelectedBrands(this.selectedBrands);
+      }
+    }
+  }
 
   constructor(
     private deviceRecommenderService: DeviceRecommenderService,
