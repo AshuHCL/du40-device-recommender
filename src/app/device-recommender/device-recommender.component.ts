@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
   name: 'limitTo'
 })
 
-export class limitToPipe {
+export class TruncatePipe {
   transform(value: any, args: number) : any {   
     return value !== undefined ? value.slice(0, args) : null;
   }
