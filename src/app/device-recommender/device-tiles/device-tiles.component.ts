@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy, Pipe, Injectable, PipeTransform } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { DeviceRecommenderService } from '../../common/services/device-recommender.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -9,22 +9,13 @@ import { Subscription } from 'rxjs/Subscription';
   	changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-@Pipe({
- name: 'searchfilter'
-})
 
-@Injectable()
-export class SearchFilterPipe implements PipeTransform {
- transform(items: any[], brand: string, value: string): any[] {
-	 alert(2);
-   if (!items) return [];
-   return items.filter(it => it[brand] == value);
- }
-}
 
 export class DeviceTilesComponent implements OnInit {
 	message: any;
+	filterdata:any;
 	text:any;
+	branditem:any;
 	public itemPrice;
 	public commitmentTerms = [];
 	public imgUrl = [];
@@ -40,12 +31,16 @@ export class DeviceTilesComponent implements OnInit {
 	
     subscription: Subscription;
 	private getDevicePriceDetails = function (rexDevices) {
-
+		let tempArr=[];
         var x, skuids;
 		this.totalDeviceRecommendations = rexDevices;
 		console.log("this.totalDeviceRecommendations"+rexDevices);
 		this.ref.detectChanges();
-
+		 this.branditem = this.totalDeviceRecommendations.map(function (item) {
+			 this.tempArr.push(item.brand);
+            //return  tempArr;
+        }).join(',');
+		console.log("branditem---",this.tempArr);
 		//gets the initial recommended devices to be displayed from recommender API
         for (x in this.totalDeviceRecommendations) {
             if (this.totalDeviceRecommendations[x].source === 'rex') {
@@ -65,6 +60,8 @@ export class DeviceTilesComponent implements OnInit {
         skuids = this.totalDeviceRecommendations.map(function (item) {
             return item.skuId;
         }).join(',');
+		 
+		
 
         this.deviceRecommenderService.getItemPriceData(skuids).subscribe((result:any) => {
             var commitmentTerms = {};
@@ -91,19 +88,17 @@ export class DeviceTilesComponent implements OnInit {
 		// TODO
 	};
 
-    constructor(
-    	private deviceRecommenderService: DeviceRecommenderService,
-        private ref: ChangeDetectorRef,
-		
-		)
-		 {
-				this.subscription = this.deviceRecommenderService.getMessage().subscribe(message => { this.message = message;
-					console.log(this.message );
+    constructor(private deviceRecommenderService: DeviceRecommenderService,	private ref: ChangeDetectorRef)
+			{
+				this.subscription = this.deviceRecommenderService.getMessage()
+				 .subscribe(message => { this.message = message;
+						console.log("mmmmmmmmm",this.message );
 			 });
 
 	 }
 
     ngOnInit() {
+
   	  	this.deviceRecommenderService.getUpgradingDeviceDetailsData().subscribe( 
         	(data: any) => {
         		this.deviceRecommenderService.getRecommendedDevices(data.payload).subscribe( 

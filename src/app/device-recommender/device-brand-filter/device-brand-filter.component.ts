@@ -26,8 +26,6 @@ implements OnInit {
 
     type = [];
     index: any ;
-    uniqueArray: string;
-
     resultArray: any;
   
     data: any;
@@ -39,8 +37,7 @@ implements OnInit {
     public totalDeviceRecommendations;
 
  sendMessage(){
-   alert();
-        // send message to subscribers via observable subject
+           // send message to subscribers via observable subject
            this.deviceRecommenderService.sendMessage(this.args);
     }
  
@@ -76,7 +73,7 @@ implements OnInit {
             
                   //let x=this.type.checked;
                   this.type.push(filterData);
-                  console.log("check part"+this.type);  
+                  console.log("check part", this.type);  
                   this.deviceRecommenderService.sendMessage(this.type);
    
               }
@@ -85,7 +82,7 @@ implements OnInit {
                                  var index = this.type.indexOf(filterData);
                                  this.type.splice(index, 1);
                                  this.deviceRecommenderService.sendMessage(this.type);
-                                  console.log(this.type);  
+                                  console.log("uncheck part",this.type);  
                                }
     }
    
@@ -110,46 +107,3 @@ implements OnInit {
 
 }
 
-
-
-@Pipe({
-
-    name: 'filterUnique',
-
-    pure: false
-
-})
-
-export class
-FilterPipe implements
-PipeTransform {
-
-    uniqueArray: {}[];
-
-
-
-    transform(value:
-        any, args ? :
-        any): any {
-
-
-        // Remove the duplicate elements
-
-        // let uniqueArray = value.filter(function (el, index, array) {
-
-        // return array.indexOf(el) == index;
-
-        // });
-
-
-        this.uniqueArray =
-            Array.from(new Set(value));
-
-
-        return this.uniqueArray;
-
-    }
-
-
-
-}
