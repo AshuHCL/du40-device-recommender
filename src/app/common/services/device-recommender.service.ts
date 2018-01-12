@@ -22,22 +22,13 @@ export class DeviceRecommenderService {
         '#F1E0CC'
     ];
     private rexDevices = new Subject<any>();
-    private selectedDeviceBrands = new Subject<any>();
   	
     constructor(private http: HttpClient) { }
 
-    public getRexObservableData = function () {
+    public getRexObservableData = function() {
         return this.rexDevices;
     };
-
-    public getSelectedBrandsToFilter = function () {
-        return this.selectedDeviceBrands;
-    };
-      
-    public emitSelectedBrands = function (selectedBrands) {
-        this.selectedDeviceBrands.next(selectedBrands);
-    };
-
+  	
   	public getUpgradingDeviceDetailsData() {
     	return this.http.get(this.upgradingUserApiUrl, {});
 	};
