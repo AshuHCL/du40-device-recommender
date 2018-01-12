@@ -1,9 +1,0 @@
-{
-  "orderFlowResponseDO": {
-    "accountType": "IRU",
-    "ssnValidation": false,
-    "accountSubType": "R",
-    "skipFlag": false,
-    "passcodeValidation": true
-  }
-}
